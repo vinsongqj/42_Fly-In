@@ -1,0 +1,7 @@
+nb_drones: 5
+start_hub: start 0 0 [max_drones=1]
+hub: midpoint 1 0 [zone=restricted max_drones=1]
+end_hub: end 2 0 [max_drones=1]
+
+connection: start-midpoint [max_link_capacity=1]
+connection: midpoint-end [max_link_capacity=1]

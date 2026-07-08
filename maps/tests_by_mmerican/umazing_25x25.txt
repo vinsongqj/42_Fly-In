@@ -1,0 +1,1245 @@
+nb_drones: 15
+start_hub: cell_0_0 0 25
+hub: cell_1_0 1 25
+hub: cell_2_0 2 25 [max_drones=10 color=blue]
+connection: cell_1_0-cell_2_0 [max_link_capacity=100]
+hub: cell_3_0 3 25 [max_drones=10 color=blue]
+connection: cell_2_0-cell_3_0 [max_link_capacity=100]
+hub: cell_4_0 4 25
+hub: cell_5_0 5 25
+connection: cell_4_0-cell_5_0 [max_link_capacity=100]
+hub: cell_6_0 6 25
+connection: cell_5_0-cell_6_0 [max_link_capacity=100]
+hub: cell_7_0 7 25
+connection: cell_6_0-cell_7_0 [max_link_capacity=100]
+hub: cell_8_0 8 25
+connection: cell_7_0-cell_8_0 [max_link_capacity=100]
+hub: cell_9_0 9 25
+connection: cell_8_0-cell_9_0 [max_link_capacity=100]
+hub: cell_10_0 10 25
+hub: cell_11_0 11 25
+connection: cell_10_0-cell_11_0 [max_link_capacity=100]
+hub: cell_12_0 12 25
+connection: cell_11_0-cell_12_0 [max_link_capacity=100]
+hub: cell_13_0 13 25
+connection: cell_12_0-cell_13_0 [max_link_capacity=100]
+hub: cell_14_0 14 25
+connection: cell_13_0-cell_14_0 [max_link_capacity=100]
+hub: cell_15_0 15 25
+hub: cell_16_0 16 25
+connection: cell_15_0-cell_16_0 [max_link_capacity=100]
+hub: cell_17_0 17 25
+connection: cell_16_0-cell_17_0 [max_link_capacity=100]
+hub: cell_18_0 18 25
+connection: cell_17_0-cell_18_0 [max_link_capacity=100]
+hub: cell_19_0 19 25
+connection: cell_18_0-cell_19_0 [max_link_capacity=100]
+hub: cell_20_0 20 25
+connection: cell_19_0-cell_20_0 [max_link_capacity=100]
+hub: cell_21_0 21 25
+connection: cell_20_0-cell_21_0 [max_link_capacity=100]
+hub: cell_22_0 22 25
+hub: cell_23_0 23 25
+connection: cell_22_0-cell_23_0 [max_link_capacity=100]
+hub: cell_24_0 24 25
+connection: cell_23_0-cell_24_0 [max_link_capacity=100]
+hub: cell_0_1 0 24 [max_drones=10 color=blue]
+connection: cell_0_0-cell_0_1 [max_link_capacity=100]
+hub: cell_1_1 1 24 [max_drones=10 color=blue]
+connection: cell_0_1-cell_1_1 [max_link_capacity=100]
+hub: cell_2_1 2 24 [max_drones=10 color=blue]
+connection: cell_2_0-cell_2_1 [max_link_capacity=100]
+hub: cell_3_1 3 24 [max_drones=10 color=blue]
+connection: cell_3_0-cell_3_1 [max_link_capacity=100]
+hub: cell_4_1 4 24 [max_drones=10 color=blue]
+connection: cell_3_1-cell_4_1 [max_link_capacity=100]
+hub: cell_5_1 5 24 [max_drones=10 color=blue]
+connection: cell_4_1-cell_5_1 [max_link_capacity=100]
+hub: cell_6_1 6 24 [max_drones=10 color=blue]
+connection: cell_5_1-cell_6_1 [max_link_capacity=100]
+hub: cell_7_1 7 24
+hub: cell_8_1 8 24
+connection: cell_8_0-cell_8_1 [max_link_capacity=100]
+connection: cell_7_1-cell_8_1 [max_link_capacity=100]
+hub: cell_9_1 9 24
+connection: cell_9_0-cell_9_1 [max_link_capacity=100]
+hub: cell_10_1 10 24
+connection: cell_9_1-cell_10_1 [max_link_capacity=100]
+hub: cell_11_1 11 24
+connection: cell_10_1-cell_11_1 [max_link_capacity=100]
+hub: cell_12_1 12 24
+connection: cell_11_1-cell_12_1 [max_link_capacity=100]
+hub: cell_13_1 13 24
+connection: cell_13_0-cell_13_1 [max_link_capacity=100]
+connection: cell_12_1-cell_13_1 [max_link_capacity=100]
+hub: cell_14_1 14 24
+connection: cell_14_0-cell_14_1 [max_link_capacity=100]
+hub: cell_15_1 15 24
+hub: cell_16_1 16 24
+connection: cell_16_0-cell_16_1 [max_link_capacity=100]
+connection: cell_15_1-cell_16_1 [max_link_capacity=100]
+hub: cell_17_1 17 24
+connection: cell_17_0-cell_17_1 [max_link_capacity=100]
+hub: cell_18_1 18 24
+connection: cell_17_1-cell_18_1 [max_link_capacity=100]
+hub: cell_19_1 19 24
+connection: cell_19_0-cell_19_1 [max_link_capacity=100]
+connection: cell_18_1-cell_19_1 [max_link_capacity=100]
+hub: cell_20_1 20 24
+connection: cell_20_0-cell_20_1 [max_link_capacity=100]
+connection: cell_19_1-cell_20_1 [max_link_capacity=100]
+hub: cell_21_1 21 24
+connection: cell_21_0-cell_21_1 [max_link_capacity=100]
+hub: cell_22_1 22 24
+connection: cell_21_1-cell_22_1 [max_link_capacity=100]
+hub: cell_23_1 23 24
+connection: cell_23_0-cell_23_1 [max_link_capacity=100]
+hub: cell_24_1 24 24
+connection: cell_24_0-cell_24_1 [max_link_capacity=100]
+hub: cell_0_2 0 23
+hub: cell_1_2 1 23 [max_drones=10 color=blue]
+connection: cell_1_1-cell_1_2 [max_link_capacity=100]
+hub: cell_2_2 2 23 [max_drones=10 color=blue]
+connection: cell_2_1-cell_2_2 [max_link_capacity=100]
+hub: cell_3_2 3 23 [max_drones=10 color=blue]
+connection: cell_2_2-cell_3_2 [max_link_capacity=100]
+hub: cell_4_2 4 23 [max_drones=10 color=blue]
+hub: cell_5_2 5 23 [max_drones=10 color=blue]
+connection: cell_4_2-cell_5_2 [max_link_capacity=100]
+hub: cell_6_2 6 23 [max_drones=10 color=blue]
+connection: cell_6_1-cell_6_2 [max_link_capacity=100]
+connection: cell_5_2-cell_6_2 [max_link_capacity=100]
+hub: cell_7_2 7 23
+connection: cell_7_1-cell_7_2 [max_link_capacity=100]
+connection: cell_6_2-cell_7_2 [max_link_capacity=100]
+hub: cell_8_2 8 23
+connection: cell_7_2-cell_8_2 [max_link_capacity=100]
+hub: cell_9_2 9 23
+connection: cell_8_2-cell_9_2 [max_link_capacity=100]
+hub: cell_10_2 10 23
+hub: cell_11_2 11 23
+connection: cell_10_2-cell_11_2 [max_link_capacity=100]
+hub: cell_12_2 12 23
+connection: cell_11_2-cell_12_2 [max_link_capacity=100]
+hub: cell_13_2 13 23
+connection: cell_12_2-cell_13_2 [max_link_capacity=100]
+hub: cell_14_2 14 23
+connection: cell_14_1-cell_14_2 [max_link_capacity=100]
+connection: cell_13_2-cell_14_2 [max_link_capacity=100]
+hub: cell_15_2 15 23
+connection: cell_15_1-cell_15_2 [max_link_capacity=100]
+hub: cell_16_2 16 23
+hub: cell_17_2 17 23
+hub: cell_18_2 18 23
+connection: cell_17_2-cell_18_2 [max_link_capacity=100]
+hub: cell_19_2 19 23
+connection: cell_18_2-cell_19_2 [max_link_capacity=100]
+hub: cell_20_2 20 23
+hub: cell_21_2 21 23
+connection: cell_20_2-cell_21_2 [max_link_capacity=100]
+hub: cell_22_2 22 23
+connection: cell_22_1-cell_22_2 [max_link_capacity=100]
+connection: cell_21_2-cell_22_2 [max_link_capacity=100]
+hub: cell_23_2 23 23
+hub: cell_24_2 24 23
+connection: cell_24_1-cell_24_2 [max_link_capacity=100]
+connection: cell_23_2-cell_24_2 [max_link_capacity=100]
+hub: cell_0_3 0 22
+connection: cell_0_2-cell_0_3 [max_link_capacity=100]
+hub: cell_1_3 1 22 [max_drones=10 color=blue]
+connection: cell_1_2-cell_1_3 [max_link_capacity=100]
+hub: cell_2_3 2 22 [max_drones=10 color=blue]
+connection: cell_1_3-cell_2_3 [max_link_capacity=100]
+hub: cell_3_3 3 22 [max_drones=10 color=blue]
+connection: cell_3_2-cell_3_3 [max_link_capacity=100]
+connection: cell_2_3-cell_3_3 [max_link_capacity=100]
+hub: cell_4_3 4 22 [max_drones=10 color=blue]
+connection: cell_4_2-cell_4_3 [max_link_capacity=100]
+hub: cell_5_3 5 22 [max_drones=10 color=blue]
+connection: cell_4_3-cell_5_3 [max_link_capacity=100]
+hub: cell_6_3 6 22
+hub: cell_7_3 7 22
+connection: cell_7_2-cell_7_3 [max_link_capacity=100]
+connection: cell_6_3-cell_7_3 [max_link_capacity=100]
+hub: cell_8_3 8 22
+connection: cell_7_3-cell_8_3 [max_link_capacity=100]
+hub: cell_9_3 9 22
+connection: cell_9_2-cell_9_3 [max_link_capacity=100]
+hub: cell_10_3 10 22
+connection: cell_10_2-cell_10_3 [max_link_capacity=100]
+hub: cell_11_3 11 22
+connection: cell_10_3-cell_11_3 [max_link_capacity=100]
+hub: cell_12_3 12 22
+hub: cell_13_3 13 22
+connection: cell_12_3-cell_13_3 [max_link_capacity=100]
+hub: cell_14_3 14 22
+connection: cell_14_2-cell_14_3 [max_link_capacity=100]
+hub: cell_15_3 15 22
+connection: cell_15_2-cell_15_3 [max_link_capacity=100]
+connection: cell_14_3-cell_15_3 [max_link_capacity=100]
+hub: cell_16_3 16 22
+connection: cell_16_2-cell_16_3 [max_link_capacity=100]
+hub: cell_17_3 17 22
+connection: cell_17_2-cell_17_3 [max_link_capacity=100]
+connection: cell_16_3-cell_17_3 [max_link_capacity=100]
+hub: cell_18_3 18 22
+hub: cell_19_3 19 22
+connection: cell_19_2-cell_19_3 [max_link_capacity=100]
+hub: cell_20_3 20 22
+connection: cell_20_2-cell_20_3 [max_link_capacity=100]
+hub: cell_21_3 21 22
+connection: cell_20_3-cell_21_3 [max_link_capacity=100]
+hub: cell_22_3 22 22
+hub: cell_23_3 23 22
+connection: cell_23_2-cell_23_3 [max_link_capacity=100]
+connection: cell_22_3-cell_23_3 [max_link_capacity=100]
+hub: cell_24_3 24 22
+connection: cell_24_2-cell_24_3 [max_link_capacity=100]
+hub: cell_0_4 0 21
+connection: cell_0_3-cell_0_4 [max_link_capacity=100]
+hub: cell_1_4 1 21
+hub: cell_2_4 2 21
+connection: cell_1_4-cell_2_4 [max_link_capacity=100]
+hub: cell_3_4 3 21
+hub: cell_4_4 4 21
+connection: cell_3_4-cell_4_4 [max_link_capacity=100]
+hub: cell_5_4 5 21 [max_drones=10 color=blue]
+connection: cell_5_3-cell_5_4 [max_link_capacity=100]
+connection: cell_4_4-cell_5_4 [max_link_capacity=100]
+hub: cell_6_4 6 21 [max_drones=10 color=blue]
+connection: cell_5_4-cell_6_4 [max_link_capacity=100]
+hub: cell_7_4 7 21
+connection: cell_6_4-cell_7_4 [max_link_capacity=100]
+hub: cell_8_4 8 21
+hub: cell_9_4 9 21
+connection: cell_9_3-cell_9_4 [max_link_capacity=100]
+connection: cell_8_4-cell_9_4 [max_link_capacity=100]
+hub: cell_10_4 10 21
+hub: cell_11_4 11 21
+connection: cell_11_3-cell_11_4 [max_link_capacity=100]
+hub: cell_12_4 12 21
+connection: cell_12_3-cell_12_4 [max_link_capacity=100]
+hub: cell_13_4 13 21
+connection: cell_13_3-cell_13_4 [max_link_capacity=100]
+hub: cell_14_4 14 21
+hub: cell_15_4 15 21
+connection: cell_14_4-cell_15_4 [max_link_capacity=100]
+hub: cell_16_4 16 21
+connection: cell_16_3-cell_16_4 [max_link_capacity=100]
+connection: cell_15_4-cell_16_4 [max_link_capacity=100]
+hub: cell_17_4 17 21
+connection: cell_16_4-cell_17_4 [max_link_capacity=100]
+hub: cell_18_4 18 21
+connection: cell_18_3-cell_18_4 [max_link_capacity=100]
+connection: cell_17_4-cell_18_4 [max_link_capacity=100]
+hub: cell_19_4 19 21
+connection: cell_19_3-cell_19_4 [max_link_capacity=100]
+hub: cell_20_4 20 21
+connection: cell_19_4-cell_20_4 [max_link_capacity=100]
+hub: cell_21_4 21 21
+connection: cell_21_3-cell_21_4 [max_link_capacity=100]
+hub: cell_22_4 22 21
+connection: cell_22_3-cell_22_4 [max_link_capacity=100]
+hub: cell_23_4 23 21
+connection: cell_22_4-cell_23_4 [max_link_capacity=100]
+hub: cell_24_4 24 21
+connection: cell_24_3-cell_24_4 [max_link_capacity=100]
+hub: cell_0_5 0 20
+connection: cell_0_4-cell_0_5 [max_link_capacity=100]
+hub: cell_1_5 1 20
+connection: cell_1_4-cell_1_5 [max_link_capacity=100]
+connection: cell_0_5-cell_1_5 [max_link_capacity=100]
+hub: cell_2_5 2 20
+connection: cell_2_4-cell_2_5 [max_link_capacity=100]
+hub: cell_3_5 3 20
+connection: cell_3_4-cell_3_5 [max_link_capacity=100]
+hub: cell_4_5 4 20
+hub: cell_5_5 5 20 [max_drones=10 color=blue]
+connection: cell_4_5-cell_5_5 [max_link_capacity=100]
+hub: cell_6_5 6 20 [max_drones=10 color=blue]
+connection: cell_6_4-cell_6_5 [max_link_capacity=100]
+connection: cell_5_5-cell_6_5 [max_link_capacity=100]
+hub: cell_7_5 7 20
+connection: cell_7_4-cell_7_5 [max_link_capacity=100]
+hub: cell_8_5 8 20
+connection: cell_8_4-cell_8_5 [max_link_capacity=100]
+hub: cell_9_5 9 20
+connection: cell_8_5-cell_9_5 [max_link_capacity=100]
+hub: cell_10_5 10 20
+connection: cell_10_4-cell_10_5 [max_link_capacity=100]
+hub: cell_11_5 11 20
+connection: cell_11_4-cell_11_5 [max_link_capacity=100]
+hub: cell_12_5 12 20
+connection: cell_12_4-cell_12_5 [max_link_capacity=100]
+hub: cell_13_5 13 20
+connection: cell_13_4-cell_13_5 [max_link_capacity=100]
+hub: cell_14_5 14 20
+connection: cell_13_5-cell_14_5 [max_link_capacity=100]
+hub: cell_15_5 15 20
+connection: cell_14_5-cell_15_5 [max_link_capacity=100]
+hub: cell_16_5 16 20
+connection: cell_16_4-cell_16_5 [max_link_capacity=100]
+connection: cell_15_5-cell_16_5 [max_link_capacity=100]
+hub: cell_17_5 17 20
+hub: cell_18_5 18 20
+connection: cell_18_4-cell_18_5 [max_link_capacity=100]
+connection: cell_17_5-cell_18_5 [max_link_capacity=100]
+hub: cell_19_5 19 20
+hub: cell_20_5 20 20
+connection: cell_20_4-cell_20_5 [max_link_capacity=100]
+connection: cell_19_5-cell_20_5 [max_link_capacity=100]
+hub: cell_21_5 21 20
+connection: cell_21_4-cell_21_5 [max_link_capacity=100]
+hub: cell_22_5 22 20
+connection: cell_21_5-cell_22_5 [max_link_capacity=100]
+hub: cell_23_5 23 20
+connection: cell_23_4-cell_23_5 [max_link_capacity=100]
+hub: cell_24_5 24 20
+connection: cell_24_4-cell_24_5 [max_link_capacity=100]
+hub: cell_0_6 0 19
+hub: cell_1_6 1 19
+connection: cell_0_6-cell_1_6 [max_link_capacity=100]
+hub: cell_2_6 2 19
+connection: cell_2_5-cell_2_6 [max_link_capacity=100]
+hub: cell_3_6 3 19
+connection: cell_3_5-cell_3_6 [max_link_capacity=100]
+hub: cell_4_6 4 19
+connection: cell_4_5-cell_4_6 [max_link_capacity=100]
+hub: cell_5_6 5 19 [max_drones=10 color=blue]
+connection: cell_5_5-cell_5_6 [max_link_capacity=100]
+hub: cell_6_6 6 19
+connection: cell_5_6-cell_6_6 [max_link_capacity=100]
+hub: cell_7_6 7 19
+connection: cell_7_5-cell_7_6 [max_link_capacity=100]
+connection: cell_6_6-cell_7_6 [max_link_capacity=100]
+hub: cell_8_6 8 19
+connection: cell_7_6-cell_8_6 [max_link_capacity=100]
+hub: cell_9_6 9 19
+connection: cell_9_5-cell_9_6 [max_link_capacity=100]
+hub: cell_10_6 10 19
+connection: cell_10_5-cell_10_6 [max_link_capacity=100]
+hub: cell_11_6 11 19
+connection: cell_11_5-cell_11_6 [max_link_capacity=100]
+connection: cell_10_6-cell_11_6 [max_link_capacity=100]
+hub: cell_12_6 12 19
+connection: cell_12_5-cell_12_6 [max_link_capacity=100]
+hub: cell_13_6 13 19
+hub: cell_14_6 14 19
+connection: cell_13_6-cell_14_6 [max_link_capacity=100]
+hub: cell_15_6 15 19
+connection: cell_14_6-cell_15_6 [max_link_capacity=100]
+hub: cell_16_6 16 19
+connection: cell_16_5-cell_16_6 [max_link_capacity=100]
+hub: cell_17_6 17 19
+connection: cell_16_6-cell_17_6 [max_link_capacity=100]
+hub: cell_18_6 18 19
+connection: cell_18_5-cell_18_6 [max_link_capacity=100]
+hub: cell_19_6 19 19
+connection: cell_19_5-cell_19_6 [max_link_capacity=100]
+hub: cell_20_6 20 19
+connection: cell_19_6-cell_20_6 [max_link_capacity=100]
+hub: cell_21_6 21 19
+connection: cell_20_6-cell_21_6 [max_link_capacity=100]
+hub: cell_22_6 22 19
+connection: cell_22_5-cell_22_6 [max_link_capacity=100]
+hub: cell_23_6 23 19
+connection: cell_23_5-cell_23_6 [max_link_capacity=100]
+hub: cell_24_6 24 19
+connection: cell_23_6-cell_24_6 [max_link_capacity=100]
+hub: cell_0_7 0 18
+connection: cell_0_6-cell_0_7 [max_link_capacity=100]
+hub: cell_1_7 1 18
+connection: cell_1_6-cell_1_7 [max_link_capacity=100]
+hub: cell_2_7 2 18
+connection: cell_2_6-cell_2_7 [max_link_capacity=100]
+connection: cell_1_7-cell_2_7 [max_link_capacity=100]
+hub: cell_3_7 3 18
+connection: cell_3_6-cell_3_7 [max_link_capacity=100]
+hub: cell_4_7 4 18
+connection: cell_3_7-cell_4_7 [max_link_capacity=100]
+hub: cell_5_7 5 18
+connection: cell_5_6-cell_5_7 [max_link_capacity=100]
+hub: cell_6_7 6 18
+connection: cell_5_7-cell_6_7 [max_link_capacity=100]
+hub: cell_7_7 7 18
+hub: cell_8_7 8 18
+connection: cell_8_6-cell_8_7 [max_link_capacity=100]
+connection: cell_7_7-cell_8_7 [max_link_capacity=100]
+hub: cell_9_7 9 18
+connection: cell_9_6-cell_9_7 [max_link_capacity=100]
+connection: cell_8_7-cell_9_7 [max_link_capacity=100]
+hub: cell_10_7 10 18
+hub: cell_11_7 11 18
+connection: cell_10_7-cell_11_7 [max_link_capacity=100]
+hub: cell_12_7 12 18
+connection: cell_12_6-cell_12_7 [max_link_capacity=100]
+connection: cell_11_7-cell_12_7 [max_link_capacity=100]
+hub: cell_13_7 13 18
+connection: cell_13_6-cell_13_7 [max_link_capacity=100]
+connection: cell_12_7-cell_13_7 [max_link_capacity=100]
+hub: cell_14_7 14 18
+hub: cell_15_7 15 18
+connection: cell_15_6-cell_15_7 [max_link_capacity=100]
+hub: cell_16_7 16 18
+hub: cell_17_7 17 18
+connection: cell_17_6-cell_17_7 [max_link_capacity=100]
+connection: cell_16_7-cell_17_7 [max_link_capacity=100]
+hub: cell_18_7 18 18
+connection: cell_18_6-cell_18_7 [max_link_capacity=100]
+hub: cell_19_7 19 18
+connection: cell_18_7-cell_19_7 [max_link_capacity=100]
+hub: cell_20_7 20 18
+hub: cell_21_7 21 18
+connection: cell_21_6-cell_21_7 [max_link_capacity=100]
+connection: cell_20_7-cell_21_7 [max_link_capacity=100]
+hub: cell_22_7 22 18
+connection: cell_22_6-cell_22_7 [max_link_capacity=100]
+hub: cell_23_7 23 18
+connection: cell_22_7-cell_23_7 [max_link_capacity=100]
+hub: cell_24_7 24 18
+connection: cell_24_6-cell_24_7 [max_link_capacity=100]
+connection: cell_23_7-cell_24_7 [max_link_capacity=100]
+hub: cell_0_8 0 17
+connection: cell_0_7-cell_0_8 [max_link_capacity=100]
+hub: cell_1_8 1 17
+hub: cell_2_8 2 17
+connection: cell_1_8-cell_2_8 [max_link_capacity=100]
+hub: cell_3_8 3 17
+hub: cell_4_8 4 17
+connection: cell_4_7-cell_4_8 [max_link_capacity=100]
+connection: cell_3_8-cell_4_8 [max_link_capacity=100]
+hub: cell_5_8 5 17
+connection: cell_5_7-cell_5_8 [max_link_capacity=100]
+hub: cell_6_8 6 17
+connection: cell_6_7-cell_6_8 [max_link_capacity=100]
+hub: cell_7_8 7 17
+hub: cell_8_8 8 17
+connection: cell_7_8-cell_8_8 [max_link_capacity=100]
+hub: cell_9_8 9 17
+connection: cell_9_7-cell_9_8 [max_link_capacity=100]
+hub: cell_10_8 10 17
+connection: cell_10_7-cell_10_8 [max_link_capacity=100]
+hub: cell_11_8 11 17
+hub: cell_12_8 12 17
+connection: cell_11_8-cell_12_8 [max_link_capacity=100]
+hub: cell_13_8 13 17
+connection: cell_13_7-cell_13_8 [max_link_capacity=100]
+connection: cell_12_8-cell_13_8 [max_link_capacity=100]
+hub: cell_14_8 14 17
+connection: cell_14_7-cell_14_8 [max_link_capacity=100]
+hub: cell_15_8 15 17
+connection: cell_15_7-cell_15_8 [max_link_capacity=100]
+hub: cell_16_8 16 17
+connection: cell_16_7-cell_16_8 [max_link_capacity=100]
+hub: cell_17_8 17 17
+hub: cell_18_8 18 17
+connection: cell_17_8-cell_18_8 [max_link_capacity=100]
+hub: cell_19_8 19 17
+connection: cell_19_7-cell_19_8 [max_link_capacity=100]
+connection: cell_18_8-cell_19_8 [max_link_capacity=100]
+hub: cell_20_8 20 17
+connection: cell_20_7-cell_20_8 [max_link_capacity=100]
+hub: cell_21_8 21 17
+connection: cell_20_8-cell_21_8 [max_link_capacity=100]
+hub: cell_22_8 22 17
+connection: cell_21_8-cell_22_8 [max_link_capacity=100]
+hub: cell_23_8 23 17
+connection: cell_22_8-cell_23_8 [max_link_capacity=100]
+hub: cell_24_8 24 17
+connection: cell_24_7-cell_24_8 [max_link_capacity=100]
+hub: cell_0_9 0 16
+connection: cell_0_8-cell_0_9 [max_link_capacity=100]
+hub: cell_1_9 1 16
+connection: cell_1_8-cell_1_9 [max_link_capacity=100]
+hub: cell_2_9 2 16
+connection: cell_2_8-cell_2_9 [max_link_capacity=100]
+hub: cell_3_9 3 16
+connection: cell_3_8-cell_3_9 [max_link_capacity=100]
+connection: cell_2_9-cell_3_9 [max_link_capacity=100]
+hub: cell_4_9 4 16
+hub: cell_5_9 5 16
+connection: cell_5_8-cell_5_9 [max_link_capacity=100]
+hub: cell_6_9 6 16
+connection: cell_6_8-cell_6_9 [max_link_capacity=100]
+hub: cell_7_9 7 16
+connection: cell_7_8-cell_7_9 [max_link_capacity=100]
+connection: cell_6_9-cell_7_9 [max_link_capacity=100]
+hub: cell_8_9 8 16
+connection: cell_8_8-cell_8_9 [max_link_capacity=100]
+hub: cell_9_9 9 16
+connection: cell_9_8-cell_9_9 [max_link_capacity=100]
+hub: cell_10_9 10 16
+connection: cell_10_8-cell_10_9 [max_link_capacity=100]
+hub: cell_11_9 11 16
+connection: cell_11_8-cell_11_9 [max_link_capacity=100]
+hub: cell_12_9 12 16
+connection: cell_12_8-cell_12_9 [max_link_capacity=100]
+hub: cell_13_9 13 16
+hub: cell_14_9 14 16
+connection: cell_14_8-cell_14_9 [max_link_capacity=100]
+connection: cell_13_9-cell_14_9 [max_link_capacity=100]
+hub: cell_15_9 15 16
+connection: cell_15_8-cell_15_9 [max_link_capacity=100]
+connection: cell_14_9-cell_15_9 [max_link_capacity=100]
+hub: cell_16_9 16 16
+connection: cell_16_8-cell_16_9 [max_link_capacity=100]
+hub: cell_17_9 17 16
+connection: cell_17_8-cell_17_9 [max_link_capacity=100]
+hub: cell_18_9 18 16
+hub: cell_19_9 19 16
+connection: cell_18_9-cell_19_9 [max_link_capacity=100]
+hub: cell_20_9 20 16
+connection: cell_19_9-cell_20_9 [max_link_capacity=100]
+hub: cell_21_9 21 16
+connection: cell_20_9-cell_21_9 [max_link_capacity=100]
+hub: cell_22_9 22 16
+connection: cell_22_8-cell_22_9 [max_link_capacity=100]
+hub: cell_23_9 23 16
+connection: cell_23_8-cell_23_9 [max_link_capacity=100]
+hub: cell_24_9 24 16
+connection: cell_24_8-cell_24_9 [max_link_capacity=100]
+connection: cell_23_9-cell_24_9 [max_link_capacity=100]
+hub: cell_0_10 0 15
+connection: cell_0_9-cell_0_10 [max_link_capacity=100]
+hub: cell_1_10 1 15
+connection: cell_1_9-cell_1_10 [max_link_capacity=100]
+hub: cell_2_10 2 15
+hub: cell_3_10 3 15
+hub: cell_4_10 4 15
+connection: cell_4_9-cell_4_10 [max_link_capacity=100]
+connection: cell_3_10-cell_4_10 [max_link_capacity=100]
+hub: cell_5_10 5 15
+connection: cell_5_9-cell_5_10 [max_link_capacity=100]
+connection: cell_4_10-cell_5_10 [max_link_capacity=100]
+hub: cell_6_10 6 15
+hub: cell_7_10 7 15
+connection: cell_6_10-cell_7_10 [max_link_capacity=100]
+hub: cell_8_10 8 15
+connection: cell_8_9-cell_8_10 [max_link_capacity=100]
+hub: cell_9_10 9 15
+hub: cell_10_10 10 15
+connection: cell_10_9-cell_10_10 [max_link_capacity=100]
+hub: cell_11_10 11 15
+connection: cell_10_10-cell_11_10 [max_link_capacity=100]
+hub: cell_12_10 12 15
+connection: cell_12_9-cell_12_10 [max_link_capacity=100]
+hub: cell_13_10 13 15
+hub: cell_14_10 14 15
+hub: cell_15_10 15 15
+hub: cell_16_10 16 15
+connection: cell_16_9-cell_16_10 [max_link_capacity=100]
+hub: cell_17_10 17 15
+connection: cell_16_10-cell_17_10 [max_link_capacity=100]
+hub: cell_18_10 18 15
+connection: cell_18_9-cell_18_10 [max_link_capacity=100]
+hub: cell_19_10 19 15
+connection: cell_19_9-cell_19_10 [max_link_capacity=100]
+connection: cell_18_10-cell_19_10 [max_link_capacity=100]
+hub: cell_20_10 20 15
+connection: cell_19_10-cell_20_10 [max_link_capacity=100]
+hub: cell_21_10 21 15
+connection: cell_21_9-cell_21_10 [max_link_capacity=100]
+hub: cell_22_10 22 15
+connection: cell_21_10-cell_22_10 [max_link_capacity=100]
+hub: cell_23_10 23 15
+connection: cell_22_10-cell_23_10 [max_link_capacity=100]
+hub: cell_24_10 24 15
+connection: cell_24_9-cell_24_10 [max_link_capacity=100]
+hub: cell_0_11 0 14
+connection: cell_0_10-cell_0_11 [max_link_capacity=100]
+hub: cell_1_11 1 14
+connection: cell_1_10-cell_1_11 [max_link_capacity=100]
+hub: cell_2_11 2 14
+connection: cell_2_10-cell_2_11 [max_link_capacity=100]
+hub: cell_3_11 3 14
+connection: cell_3_10-cell_3_11 [max_link_capacity=100]
+connection: cell_2_11-cell_3_11 [max_link_capacity=100]
+hub: cell_4_11 4 14
+connection: cell_3_11-cell_4_11 [max_link_capacity=100]
+hub: cell_5_11 5 14
+connection: cell_4_11-cell_5_11 [max_link_capacity=100]
+hub: cell_6_11 6 14
+connection: cell_5_11-cell_6_11 [max_link_capacity=100]
+hub: cell_7_11 7 14
+connection: cell_7_10-cell_7_11 [max_link_capacity=100]
+connection: cell_6_11-cell_7_11 [max_link_capacity=100]
+hub: cell_8_11 8 14
+connection: cell_8_10-cell_8_11 [max_link_capacity=100]
+hub: cell_9_11 9 14
+hub: cell_10_11 10 14
+hub: cell_11_11 11 14
+connection: cell_11_10-cell_11_11 [max_link_capacity=100]
+connection: cell_10_11-cell_11_11 [max_link_capacity=100]
+hub: cell_12_11 12 14
+connection: cell_12_10-cell_12_11 [max_link_capacity=100]
+connection: cell_11_11-cell_12_11 [max_link_capacity=100]
+hub: cell_13_11 13 14
+connection: cell_12_11-cell_13_11 [max_link_capacity=100]
+hub: cell_14_11 14 14
+connection: cell_13_11-cell_14_11 [max_link_capacity=100]
+hub: cell_15_11 15 14
+hub: cell_16_11 16 14
+hub: cell_17_11 17 14
+connection: cell_17_10-cell_17_11 [max_link_capacity=100]
+connection: cell_16_11-cell_17_11 [max_link_capacity=100]
+hub: cell_18_11 18 14
+hub: cell_19_11 19 14
+connection: cell_18_11-cell_19_11 [max_link_capacity=100]
+hub: cell_20_11 20 14
+connection: cell_20_10-cell_20_11 [max_link_capacity=100]
+connection: cell_19_11-cell_20_11 [max_link_capacity=100]
+hub: cell_21_11 21 14
+hub: cell_22_11 22 14
+connection: cell_21_11-cell_22_11 [max_link_capacity=100]
+hub: cell_23_11 23 14
+connection: cell_23_10-cell_23_11 [max_link_capacity=100]
+hub: cell_24_11 24 14
+connection: cell_23_11-cell_24_11 [max_link_capacity=100]
+hub: cell_0_12 0 13
+connection: cell_0_11-cell_0_12 [max_link_capacity=100]
+hub: cell_1_12 1 13
+connection: cell_1_11-cell_1_12 [max_link_capacity=100]
+hub: cell_2_12 2 13
+connection: cell_1_12-cell_2_12 [max_link_capacity=100]
+hub: cell_3_12 3 13
+connection: cell_2_12-cell_3_12 [max_link_capacity=100]
+hub: cell_4_12 4 13
+connection: cell_3_12-cell_4_12 [max_link_capacity=100]
+hub: cell_5_12 5 13
+hub: cell_6_12 6 13
+connection: cell_5_12-cell_6_12 [max_link_capacity=100]
+hub: cell_7_12 7 13
+connection: cell_7_11-cell_7_12 [max_link_capacity=100]
+connection: cell_6_12-cell_7_12 [max_link_capacity=100]
+hub: cell_8_12 8 13
+connection: cell_8_11-cell_8_12 [max_link_capacity=100]
+hub: cell_9_12 9 13
+hub: cell_10_12 10 13
+hub: cell_11_12 11 13
+hub: cell_12_12 12 13
+connection: cell_12_11-cell_12_12 [max_link_capacity=100]
+hub: cell_13_12 13 13
+hub: cell_14_12 14 13
+hub: cell_15_12 15 13
+hub: cell_16_12 16 13
+connection: cell_16_11-cell_16_12 [max_link_capacity=100]
+hub: cell_17_12 17 13
+hub: cell_18_12 18 13
+connection: cell_18_11-cell_18_12 [max_link_capacity=100]
+connection: cell_17_12-cell_18_12 [max_link_capacity=100]
+hub: cell_19_12 19 13
+connection: cell_18_12-cell_19_12 [max_link_capacity=100]
+hub: cell_20_12 20 13
+hub: cell_21_12 21 13
+connection: cell_21_11-cell_21_12 [max_link_capacity=100]
+connection: cell_20_12-cell_21_12 [max_link_capacity=100]
+hub: cell_22_12 22 13
+connection: cell_22_11-cell_22_12 [max_link_capacity=100]
+hub: cell_23_12 23 13
+connection: cell_23_11-cell_23_12 [max_link_capacity=100]
+hub: cell_24_12 24 13
+connection: cell_24_11-cell_24_12 [max_link_capacity=100]
+hub: cell_0_13 0 12
+connection: cell_0_12-cell_0_13 [max_link_capacity=100]
+hub: cell_1_13 1 12
+connection: cell_0_13-cell_1_13 [max_link_capacity=100]
+hub: cell_2_13 2 12
+connection: cell_1_13-cell_2_13 [max_link_capacity=100]
+hub: cell_3_13 3 12
+connection: cell_2_13-cell_3_13 [max_link_capacity=100]
+hub: cell_4_13 4 12
+connection: cell_4_12-cell_4_13 [max_link_capacity=100]
+hub: cell_5_13 5 12
+hub: cell_6_13 6 12
+connection: cell_5_13-cell_6_13 [max_link_capacity=100]
+hub: cell_7_13 7 12
+connection: cell_6_13-cell_7_13 [max_link_capacity=100]
+hub: cell_8_13 8 12
+connection: cell_8_12-cell_8_13 [max_link_capacity=100]
+connection: cell_7_13-cell_8_13 [max_link_capacity=100]
+hub: cell_9_13 9 12
+hub: cell_10_13 10 12
+connection: cell_9_13-cell_10_13 [max_link_capacity=100]
+hub: cell_11_13 11 12
+hub: cell_12_13 12 12
+connection: cell_12_12-cell_12_13 [max_link_capacity=100]
+hub: cell_13_13 13 12
+hub: cell_14_13 14 12
+hub: cell_15_13 15 12
+connection: cell_14_13-cell_15_13 [max_link_capacity=100]
+hub: cell_16_13 16 12
+connection: cell_16_12-cell_16_13 [max_link_capacity=100]
+connection: cell_15_13-cell_16_13 [max_link_capacity=100]
+hub: cell_17_13 17 12
+connection: cell_17_12-cell_17_13 [max_link_capacity=100]
+hub: cell_18_13 18 12
+connection: cell_18_12-cell_18_13 [max_link_capacity=100]
+connection: cell_17_13-cell_18_13 [max_link_capacity=100]
+hub: cell_19_13 19 12
+hub: cell_20_13 20 12
+connection: cell_20_12-cell_20_13 [max_link_capacity=100]
+connection: cell_19_13-cell_20_13 [max_link_capacity=100]
+hub: cell_21_13 21 12
+hub: cell_22_13 22 12
+connection: cell_22_12-cell_22_13 [max_link_capacity=100]
+connection: cell_21_13-cell_22_13 [max_link_capacity=100]
+hub: cell_23_13 23 12
+hub: cell_24_13 24 12
+connection: cell_24_12-cell_24_13 [max_link_capacity=100]
+connection: cell_23_13-cell_24_13 [max_link_capacity=100]
+hub: cell_0_14 0 11
+connection: cell_0_13-cell_0_14 [max_link_capacity=100]
+hub: cell_1_14 1 11
+connection: cell_0_14-cell_1_14 [max_link_capacity=100]
+hub: cell_2_14 2 11
+connection: cell_2_13-cell_2_14 [max_link_capacity=100]
+hub: cell_3_14 3 11
+connection: cell_2_14-cell_3_14 [max_link_capacity=100]
+hub: cell_4_14 4 11
+connection: cell_4_13-cell_4_14 [max_link_capacity=100]
+hub: cell_5_14 5 11
+connection: cell_5_13-cell_5_14 [max_link_capacity=100]
+hub: cell_6_14 6 11
+connection: cell_5_14-cell_6_14 [max_link_capacity=100]
+hub: cell_7_14 7 11
+connection: cell_6_14-cell_7_14 [max_link_capacity=100]
+hub: cell_8_14 8 11
+connection: cell_8_13-cell_8_14 [max_link_capacity=100]
+hub: cell_9_14 9 11
+connection: cell_9_13-cell_9_14 [max_link_capacity=100]
+connection: cell_8_14-cell_9_14 [max_link_capacity=100]
+hub: cell_10_14 10 11
+connection: cell_10_13-cell_10_14 [max_link_capacity=100]
+hub: cell_11_14 11 11
+hub: cell_12_14 12 11
+connection: cell_12_13-cell_12_14 [max_link_capacity=100]
+hub: cell_13_14 13 11
+hub: cell_14_14 14 11
+hub: cell_15_14 15 11
+hub: cell_16_14 16 11
+connection: cell_16_13-cell_16_14 [max_link_capacity=100]
+hub: cell_17_14 17 11
+connection: cell_16_14-cell_17_14 [max_link_capacity=100]
+hub: cell_18_14 18 11
+connection: cell_18_13-cell_18_14 [max_link_capacity=100]
+connection: cell_17_14-cell_18_14 [max_link_capacity=100]
+hub: cell_19_14 19 11
+connection: cell_19_13-cell_19_14 [max_link_capacity=100]
+hub: cell_20_14 20 11
+hub: cell_21_14 21 11
+connection: cell_21_13-cell_21_14 [max_link_capacity=100]
+hub: cell_22_14 22 11
+hub: cell_23_14 23 11
+connection: cell_23_13-cell_23_14 [max_link_capacity=100]
+connection: cell_22_14-cell_23_14 [max_link_capacity=100]
+hub: cell_24_14 24 11
+connection: cell_24_13-cell_24_14 [max_link_capacity=100]
+hub: cell_0_15 0 10
+hub: cell_1_15 1 10
+connection: cell_1_14-cell_1_15 [max_link_capacity=100]
+hub: cell_2_15 2 10
+connection: cell_1_15-cell_2_15 [max_link_capacity=100]
+hub: cell_3_15 3 10
+connection: cell_3_14-cell_3_15 [max_link_capacity=100]
+hub: cell_4_15 4 10
+connection: cell_4_14-cell_4_15 [max_link_capacity=100]
+connection: cell_3_15-cell_4_15 [max_link_capacity=100]
+hub: cell_5_15 5 10
+hub: cell_6_15 6 10
+connection: cell_5_15-cell_6_15 [max_link_capacity=100]
+hub: cell_7_15 7 10
+connection: cell_7_14-cell_7_15 [max_link_capacity=100]
+hub: cell_8_15 8 10
+connection: cell_7_15-cell_8_15 [max_link_capacity=100]
+hub: cell_9_15 9 10
+connection: cell_8_15-cell_9_15 [max_link_capacity=100]
+hub: cell_10_15 10 10
+hub: cell_11_15 11 10
+connection: cell_10_15-cell_11_15 [max_link_capacity=100]
+hub: cell_12_15 12 10
+connection: cell_12_14-cell_12_15 [max_link_capacity=100]
+connection: cell_11_15-cell_12_15 [max_link_capacity=100]
+hub: cell_13_15 13 10
+connection: cell_12_15-cell_13_15 [max_link_capacity=100]
+hub: cell_14_15 14 10
+hub: cell_15_15 15 10
+connection: cell_14_15-cell_15_15 [max_link_capacity=100]
+hub: cell_16_15 16 10
+hub: cell_17_15 17 10
+hub: cell_18_15 18 10
+connection: cell_17_15-cell_18_15 [max_link_capacity=100]
+hub: cell_19_15 19 10
+connection: cell_19_14-cell_19_15 [max_link_capacity=100]
+connection: cell_18_15-cell_19_15 [max_link_capacity=100]
+hub: cell_20_15 20 10
+connection: cell_20_14-cell_20_15 [max_link_capacity=100]
+hub: cell_21_15 21 10
+connection: cell_21_14-cell_21_15 [max_link_capacity=100]
+connection: cell_20_15-cell_21_15 [max_link_capacity=100]
+hub: cell_22_15 22 10
+connection: cell_22_14-cell_22_15 [max_link_capacity=100]
+hub: cell_23_15 23 10
+hub: cell_24_15 24 10
+connection: cell_24_14-cell_24_15 [max_link_capacity=100]
+connection: cell_23_15-cell_24_15 [max_link_capacity=100]
+hub: cell_0_16 0 9
+connection: cell_0_15-cell_0_16 [max_link_capacity=100]
+hub: cell_1_16 1 9
+connection: cell_0_16-cell_1_16 [max_link_capacity=100]
+hub: cell_2_16 2 9
+connection: cell_2_15-cell_2_16 [max_link_capacity=100]
+hub: cell_3_16 3 9
+hub: cell_4_16 4 9
+connection: cell_3_16-cell_4_16 [max_link_capacity=100]
+hub: cell_5_16 5 9
+connection: cell_5_15-cell_5_16 [max_link_capacity=100]
+connection: cell_4_16-cell_5_16 [max_link_capacity=100]
+hub: cell_6_16 6 9
+connection: cell_6_15-cell_6_16 [max_link_capacity=100]
+hub: cell_7_16 7 9
+connection: cell_7_15-cell_7_16 [max_link_capacity=100]
+hub: cell_8_16 8 9
+connection: cell_7_16-cell_8_16 [max_link_capacity=100]
+hub: cell_9_16 9 9
+connection: cell_9_15-cell_9_16 [max_link_capacity=100]
+hub: cell_10_16 10 9
+connection: cell_10_15-cell_10_16 [max_link_capacity=100]
+connection: cell_9_16-cell_10_16 [max_link_capacity=100]
+hub: cell_11_16 11 9
+hub: cell_12_16 12 9
+connection: cell_11_16-cell_12_16 [max_link_capacity=100]
+hub: cell_13_16 13 9
+connection: cell_13_15-cell_13_16 [max_link_capacity=100]
+hub: cell_14_16 14 9
+connection: cell_14_15-cell_14_16 [max_link_capacity=100]
+connection: cell_13_16-cell_14_16 [max_link_capacity=100]
+hub: cell_15_16 15 9
+connection: cell_15_15-cell_15_16 [max_link_capacity=100]
+hub: cell_16_16 16 9
+connection: cell_16_15-cell_16_16 [max_link_capacity=100]
+connection: cell_15_16-cell_16_16 [max_link_capacity=100]
+hub: cell_17_16 17 9
+connection: cell_17_15-cell_17_16 [max_link_capacity=100]
+hub: cell_18_16 18 9
+connection: cell_17_16-cell_18_16 [max_link_capacity=100]
+hub: cell_19_16 19 9 [max_drones=10 color=blue]
+hub: cell_20_16 20 9
+connection: cell_20_15-cell_20_16 [max_link_capacity=100]
+connection: cell_19_16-cell_20_16 [max_link_capacity=100]
+hub: cell_21_16 21 9
+hub: cell_22_16 22 9
+connection: cell_22_15-cell_22_16 [max_link_capacity=100]
+connection: cell_21_16-cell_22_16 [max_link_capacity=100]
+hub: cell_23_16 23 9
+connection: cell_22_16-cell_23_16 [max_link_capacity=100]
+hub: cell_24_16 24 9
+connection: cell_23_16-cell_24_16 [max_link_capacity=100]
+hub: cell_0_17 0 8
+connection: cell_0_16-cell_0_17 [max_link_capacity=100]
+hub: cell_1_17 1 8
+connection: cell_0_17-cell_1_17 [max_link_capacity=100]
+hub: cell_2_17 2 8
+connection: cell_2_16-cell_2_17 [max_link_capacity=100]
+hub: cell_3_17 3 8
+connection: cell_3_16-cell_3_17 [max_link_capacity=100]
+hub: cell_4_17 4 8
+connection: cell_3_17-cell_4_17 [max_link_capacity=100]
+hub: cell_5_17 5 8
+hub: cell_6_17 6 8
+connection: cell_6_16-cell_6_17 [max_link_capacity=100]
+hub: cell_7_17 7 8
+connection: cell_7_16-cell_7_17 [max_link_capacity=100]
+hub: cell_8_17 8 8
+hub: cell_9_17 9 8
+connection: cell_8_17-cell_9_17 [max_link_capacity=100]
+hub: cell_10_17 10 8
+connection: cell_10_16-cell_10_17 [max_link_capacity=100]
+hub: cell_11_17 11 8
+connection: cell_11_16-cell_11_17 [max_link_capacity=100]
+hub: cell_12_17 12 8
+connection: cell_12_16-cell_12_17 [max_link_capacity=100]
+hub: cell_13_17 13 8
+connection: cell_12_17-cell_13_17 [max_link_capacity=100]
+hub: cell_14_17 14 8
+hub: cell_15_17 15 8
+connection: cell_14_17-cell_15_17 [max_link_capacity=100]
+hub: cell_16_17 16 8
+connection: cell_16_16-cell_16_17 [max_link_capacity=100]
+connection: cell_15_17-cell_16_17 [max_link_capacity=100]
+hub: cell_17_17 17 8
+hub: cell_18_17 18 8
+connection: cell_18_16-cell_18_17 [max_link_capacity=100]
+connection: cell_17_17-cell_18_17 [max_link_capacity=100]
+hub: cell_19_17 19 8 [max_drones=10 color=blue]
+connection: cell_19_16-cell_19_17 [max_link_capacity=100]
+hub: cell_20_17 20 8 [max_drones=10 color=blue]
+connection: cell_19_17-cell_20_17 [max_link_capacity=100]
+hub: cell_21_17 21 8
+connection: cell_21_16-cell_21_17 [max_link_capacity=100]
+hub: cell_22_17 22 8
+hub: cell_23_17 23 8
+connection: cell_22_17-cell_23_17 [max_link_capacity=100]
+hub: cell_24_17 24 8
+connection: cell_24_16-cell_24_17 [max_link_capacity=100]
+connection: cell_23_17-cell_24_17 [max_link_capacity=100]
+hub: cell_0_18 0 7
+hub: cell_1_18 1 7
+connection: cell_1_17-cell_1_18 [max_link_capacity=100]
+connection: cell_0_18-cell_1_18 [max_link_capacity=100]
+hub: cell_2_18 2 7
+connection: cell_2_17-cell_2_18 [max_link_capacity=100]
+hub: cell_3_18 3 7
+connection: cell_2_18-cell_3_18 [max_link_capacity=100]
+hub: cell_4_18 4 7
+connection: cell_4_17-cell_4_18 [max_link_capacity=100]
+hub: cell_5_18 5 7
+connection: cell_5_17-cell_5_18 [max_link_capacity=100]
+hub: cell_6_18 6 7
+connection: cell_6_17-cell_6_18 [max_link_capacity=100]
+connection: cell_5_18-cell_6_18 [max_link_capacity=100]
+hub: cell_7_18 7 7
+connection: cell_6_18-cell_7_18 [max_link_capacity=100]
+hub: cell_8_18 8 7
+connection: cell_8_17-cell_8_18 [max_link_capacity=100]
+connection: cell_7_18-cell_8_18 [max_link_capacity=100]
+hub: cell_9_18 9 7
+connection: cell_9_17-cell_9_18 [max_link_capacity=100]
+hub: cell_10_18 10 7
+connection: cell_9_18-cell_10_18 [max_link_capacity=100]
+hub: cell_11_18 11 7
+connection: cell_11_17-cell_11_18 [max_link_capacity=100]
+hub: cell_12_18 12 7
+connection: cell_11_18-cell_12_18 [max_link_capacity=100]
+hub: cell_13_18 13 7
+connection: cell_13_17-cell_13_18 [max_link_capacity=100]
+hub: cell_14_18 14 7
+connection: cell_14_17-cell_14_18 [max_link_capacity=100]
+connection: cell_13_18-cell_14_18 [max_link_capacity=100]
+hub: cell_15_18 15 7
+hub: cell_16_18 16 7
+connection: cell_15_18-cell_16_18 [max_link_capacity=100]
+hub: cell_17_18 17 7
+connection: cell_17_17-cell_17_18 [max_link_capacity=100]
+connection: cell_16_18-cell_17_18 [max_link_capacity=100]
+hub: cell_18_18 18 7
+hub: cell_19_18 19 7 [max_drones=10 color=blue]
+hub: cell_20_18 20 7 [max_drones=10 color=blue]
+connection: cell_20_17-cell_20_18 [max_link_capacity=100]
+connection: cell_19_18-cell_20_18 [max_link_capacity=100]
+hub: cell_21_18 21 7
+hub: cell_22_18 22 7
+connection: cell_22_17-cell_22_18 [max_link_capacity=100]
+connection: cell_21_18-cell_22_18 [max_link_capacity=100]
+hub: cell_23_18 23 7
+hub: cell_24_18 24 7
+connection: cell_24_17-cell_24_18 [max_link_capacity=100]
+connection: cell_23_18-cell_24_18 [max_link_capacity=100]
+hub: cell_0_19 0 6
+connection: cell_0_18-cell_0_19 [max_link_capacity=100]
+hub: cell_1_19 1 6
+connection: cell_1_18-cell_1_19 [max_link_capacity=100]
+hub: cell_2_19 2 6
+hub: cell_3_19 3 6
+connection: cell_3_18-cell_3_19 [max_link_capacity=100]
+connection: cell_2_19-cell_3_19 [max_link_capacity=100]
+hub: cell_4_19 4 6
+connection: cell_4_18-cell_4_19 [max_link_capacity=100]
+hub: cell_5_19 5 6
+hub: cell_6_19 6 6
+connection: cell_5_19-cell_6_19 [max_link_capacity=100]
+hub: cell_7_19 7 6
+connection: cell_6_19-cell_7_19 [max_link_capacity=100]
+hub: cell_8_19 8 6
+hub: cell_9_19 9 6
+connection: cell_8_19-cell_9_19 [max_link_capacity=100]
+hub: cell_10_19 10 6
+connection: cell_10_18-cell_10_19 [max_link_capacity=100]
+hub: cell_11_19 11 6
+hub: cell_12_19 12 6
+connection: cell_12_18-cell_12_19 [max_link_capacity=100]
+connection: cell_11_19-cell_12_19 [max_link_capacity=100]
+hub: cell_13_19 13 6
+hub: cell_14_19 14 6
+connection: cell_14_18-cell_14_19 [max_link_capacity=100]
+connection: cell_13_19-cell_14_19 [max_link_capacity=100]
+hub: cell_15_19 15 6
+connection: cell_15_18-cell_15_19 [max_link_capacity=100]
+connection: cell_14_19-cell_15_19 [max_link_capacity=100]
+hub: cell_16_19 16 6
+hub: cell_17_19 17 6
+connection: cell_16_19-cell_17_19 [max_link_capacity=100]
+hub: cell_18_19 18 6
+connection: cell_18_18-cell_18_19 [max_link_capacity=100]
+connection: cell_17_19-cell_18_19 [max_link_capacity=100]
+hub: cell_19_19 19 6 [max_drones=10 color=blue]
+connection: cell_19_18-cell_19_19 [max_link_capacity=100]
+hub: cell_20_19 20 6
+hub: cell_21_19 21 6
+connection: cell_21_18-cell_21_19 [max_link_capacity=100]
+connection: cell_20_19-cell_21_19 [max_link_capacity=100]
+hub: cell_22_19 22 6
+hub: cell_23_19 23 6
+connection: cell_23_18-cell_23_19 [max_link_capacity=100]
+connection: cell_22_19-cell_23_19 [max_link_capacity=100]
+hub: cell_24_19 24 6
+connection: cell_23_19-cell_24_19 [max_link_capacity=100]
+hub: cell_0_20 0 5
+connection: cell_0_19-cell_0_20 [max_link_capacity=100]
+hub: cell_1_20 1 5
+connection: cell_1_19-cell_1_20 [max_link_capacity=100]
+hub: cell_2_20 2 5
+connection: cell_2_19-cell_2_20 [max_link_capacity=100]
+hub: cell_3_20 3 5
+hub: cell_4_20 4 5
+connection: cell_4_19-cell_4_20 [max_link_capacity=100]
+connection: cell_3_20-cell_4_20 [max_link_capacity=100]
+hub: cell_5_20 5 5
+connection: cell_5_19-cell_5_20 [max_link_capacity=100]
+connection: cell_4_20-cell_5_20 [max_link_capacity=100]
+hub: cell_6_20 6 5
+hub: cell_7_20 7 5
+connection: cell_7_19-cell_7_20 [max_link_capacity=100]
+connection: cell_6_20-cell_7_20 [max_link_capacity=100]
+hub: cell_8_20 8 5
+connection: cell_8_19-cell_8_20 [max_link_capacity=100]
+hub: cell_9_20 9 5
+hub: cell_10_20 10 5
+connection: cell_10_19-cell_10_20 [max_link_capacity=100]
+connection: cell_9_20-cell_10_20 [max_link_capacity=100]
+hub: cell_11_20 11 5
+connection: cell_11_19-cell_11_20 [max_link_capacity=100]
+hub: cell_12_20 12 5
+connection: cell_11_20-cell_12_20 [max_link_capacity=100]
+hub: cell_13_20 13 5
+connection: cell_12_20-cell_13_20 [max_link_capacity=100]
+hub: cell_14_20 14 5
+connection: cell_13_20-cell_14_20 [max_link_capacity=100]
+hub: cell_15_20 15 5
+connection: cell_14_20-cell_15_20 [max_link_capacity=100]
+hub: cell_16_20 16 5
+connection: cell_15_20-cell_16_20 [max_link_capacity=100]
+hub: cell_17_20 17 5
+connection: cell_17_19-cell_17_20 [max_link_capacity=100]
+hub: cell_18_20 18 5 [max_drones=10 color=blue]
+connection: cell_17_20-cell_18_20 [max_link_capacity=100]
+hub: cell_19_20 19 5 [max_drones=10 color=blue]
+connection: cell_19_19-cell_19_20 [max_link_capacity=100]
+connection: cell_18_20-cell_19_20 [max_link_capacity=100]
+hub: cell_20_20 20 5
+connection: cell_20_19-cell_20_20 [max_link_capacity=100]
+hub: cell_21_20 21 5
+connection: cell_20_20-cell_21_20 [max_link_capacity=100]
+hub: cell_22_20 22 5
+connection: cell_21_20-cell_22_20 [max_link_capacity=100]
+hub: cell_23_20 23 5
+connection: cell_22_20-cell_23_20 [max_link_capacity=100]
+hub: cell_24_20 24 5
+connection: cell_24_19-cell_24_20 [max_link_capacity=100]
+hub: cell_0_21 0 4
+connection: cell_0_20-cell_0_21 [max_link_capacity=100]
+hub: cell_1_21 1 4
+connection: cell_1_20-cell_1_21 [max_link_capacity=100]
+hub: cell_2_21 2 4
+connection: cell_2_20-cell_2_21 [max_link_capacity=100]
+hub: cell_3_21 3 4
+connection: cell_2_21-cell_3_21 [max_link_capacity=100]
+hub: cell_4_21 4 4
+connection: cell_3_21-cell_4_21 [max_link_capacity=100]
+hub: cell_5_21 5 4
+hub: cell_6_21 6 4
+connection: cell_6_20-cell_6_21 [max_link_capacity=100]
+connection: cell_5_21-cell_6_21 [max_link_capacity=100]
+hub: cell_7_21 7 4
+hub: cell_8_21 8 4
+connection: cell_8_20-cell_8_21 [max_link_capacity=100]
+hub: cell_9_21 9 4
+connection: cell_9_20-cell_9_21 [max_link_capacity=100]
+connection: cell_8_21-cell_9_21 [max_link_capacity=100]
+hub: cell_10_21 10 4
+hub: cell_11_21 11 4
+connection: cell_11_20-cell_11_21 [max_link_capacity=100]
+connection: cell_10_21-cell_11_21 [max_link_capacity=100]
+hub: cell_12_21 12 4
+connection: cell_11_21-cell_12_21 [max_link_capacity=100]
+hub: cell_13_21 13 4
+connection: cell_12_21-cell_13_21 [max_link_capacity=100]
+hub: cell_14_21 14 4
+connection: cell_13_21-cell_14_21 [max_link_capacity=100]
+hub: cell_15_21 15 4
+connection: cell_14_21-cell_15_21 [max_link_capacity=100]
+hub: cell_16_21 16 4
+connection: cell_16_20-cell_16_21 [max_link_capacity=100]
+hub: cell_17_21 17 4
+connection: cell_17_20-cell_17_21 [max_link_capacity=100]
+hub: cell_18_21 18 4 [max_drones=10 color=blue]
+connection: cell_18_20-cell_18_21 [max_link_capacity=100]
+connection: cell_17_21-cell_18_21 [max_link_capacity=100]
+hub: cell_19_21 19 4
+hub: cell_20_21 20 4
+connection: cell_20_20-cell_20_21 [max_link_capacity=100]
+connection: cell_19_21-cell_20_21 [max_link_capacity=100]
+hub: cell_21_21 21 4 [max_drones=10 color=blue]
+hub: cell_22_21 22 4 [max_drones=10 color=blue]
+connection: cell_21_21-cell_22_21 [max_link_capacity=100]
+hub: cell_23_21 23 4
+connection: cell_23_20-cell_23_21 [max_link_capacity=100]
+hub: cell_24_21 24 4
+connection: cell_23_21-cell_24_21 [max_link_capacity=100]
+hub: cell_0_22 0 3
+connection: cell_0_21-cell_0_22 [max_link_capacity=100]
+hub: cell_1_22 1 3
+connection: cell_0_22-cell_1_22 [max_link_capacity=100]
+hub: cell_2_22 2 3
+connection: cell_1_22-cell_2_22 [max_link_capacity=100]
+hub: cell_3_22 3 3
+connection: cell_2_22-cell_3_22 [max_link_capacity=100]
+hub: cell_4_22 4 3
+connection: cell_4_21-cell_4_22 [max_link_capacity=100]
+connection: cell_3_22-cell_4_22 [max_link_capacity=100]
+hub: cell_5_22 5 3
+connection: cell_5_21-cell_5_22 [max_link_capacity=100]
+hub: cell_6_22 6 3
+hub: cell_7_22 7 3
+connection: cell_7_21-cell_7_22 [max_link_capacity=100]
+connection: cell_6_22-cell_7_22 [max_link_capacity=100]
+hub: cell_8_22 8 3
+connection: cell_8_21-cell_8_22 [max_link_capacity=100]
+hub: cell_9_22 9 3
+hub: cell_10_22 10 3
+connection: cell_9_22-cell_10_22 [max_link_capacity=100]
+hub: cell_11_22 11 3
+connection: cell_10_22-cell_11_22 [max_link_capacity=100]
+hub: cell_12_22 12 3
+connection: cell_11_22-cell_12_22 [max_link_capacity=100]
+hub: cell_13_22 13 3
+connection: cell_12_22-cell_13_22 [max_link_capacity=100]
+hub: cell_14_22 14 3
+connection: cell_13_22-cell_14_22 [max_link_capacity=100]
+hub: cell_15_22 15 3
+hub: cell_16_22 16 3
+connection: cell_16_21-cell_16_22 [max_link_capacity=100]
+connection: cell_15_22-cell_16_22 [max_link_capacity=100]
+hub: cell_17_22 17 3
+hub: cell_18_22 18 3 [max_drones=10 color=blue]
+connection: cell_18_21-cell_18_22 [max_link_capacity=100]
+hub: cell_19_22 19 3
+connection: cell_19_21-cell_19_22 [max_link_capacity=100]
+hub: cell_20_22 20 3
+connection: cell_19_22-cell_20_22 [max_link_capacity=100]
+hub: cell_21_22 21 3 [max_drones=10 color=blue]
+connection: cell_21_21-cell_21_22 [max_link_capacity=100]
+connection: cell_20_22-cell_21_22 [max_link_capacity=100]
+hub: cell_22_22 22 3 [max_drones=10 color=blue]
+connection: cell_22_21-cell_22_22 [max_link_capacity=100]
+hub: cell_23_22 23 3 [max_drones=10 color=blue]
+connection: cell_22_22-cell_23_22 [max_link_capacity=100]
+hub: cell_24_22 24 3 [max_drones=10 color=blue]
+connection: cell_24_21-cell_24_22 [max_link_capacity=100]
+connection: cell_23_22-cell_24_22 [max_link_capacity=100]
+hub: cell_0_23 0 2
+connection: cell_0_22-cell_0_23 [max_link_capacity=100]
+hub: cell_1_23 1 2
+connection: cell_0_23-cell_1_23 [max_link_capacity=100]
+hub: cell_2_23 2 2
+hub: cell_3_23 3 2
+connection: cell_2_23-cell_3_23 [max_link_capacity=100]
+hub: cell_4_23 4 2
+connection: cell_3_23-cell_4_23 [max_link_capacity=100]
+hub: cell_5_23 5 2
+connection: cell_5_22-cell_5_23 [max_link_capacity=100]
+connection: cell_4_23-cell_5_23 [max_link_capacity=100]
+hub: cell_6_23 6 2
+connection: cell_6_22-cell_6_23 [max_link_capacity=100]
+hub: cell_7_23 7 2
+connection: cell_7_22-cell_7_23 [max_link_capacity=100]
+connection: cell_6_23-cell_7_23 [max_link_capacity=100]
+hub: cell_8_23 8 2
+connection: cell_8_22-cell_8_23 [max_link_capacity=100]
+hub: cell_9_23 9 2
+connection: cell_9_22-cell_9_23 [max_link_capacity=100]
+hub: cell_10_23 10 2
+hub: cell_11_23 11 2
+connection: cell_10_23-cell_11_23 [max_link_capacity=100]
+hub: cell_12_23 12 2
+hub: cell_13_23 13 2
+connection: cell_12_23-cell_13_23 [max_link_capacity=100]
+hub: cell_14_23 14 2
+connection: cell_14_22-cell_14_23 [max_link_capacity=100]
+connection: cell_13_23-cell_14_23 [max_link_capacity=100]
+hub: cell_15_23 15 2
+connection: cell_15_22-cell_15_23 [max_link_capacity=100]
+hub: cell_16_23 16 2
+hub: cell_17_23 17 2
+connection: cell_17_22-cell_17_23 [max_link_capacity=100]
+connection: cell_16_23-cell_17_23 [max_link_capacity=100]
+hub: cell_18_23 18 2 [max_drones=10 color=blue]
+connection: cell_18_22-cell_18_23 [max_link_capacity=100]
+hub: cell_19_23 19 2 [max_drones=10 color=blue]
+connection: cell_18_23-cell_19_23 [max_link_capacity=100]
+hub: cell_20_23 20 2 [max_drones=10 color=blue]
+connection: cell_19_23-cell_20_23 [max_link_capacity=100]
+hub: cell_21_23 21 2 [max_drones=10 color=blue]
+connection: cell_21_22-cell_21_23 [max_link_capacity=100]
+hub: cell_22_23 22 2
+hub: cell_23_23 23 2
+connection: cell_22_23-cell_23_23 [max_link_capacity=100]
+hub: cell_24_23 24 2 [max_drones=10 color=blue]
+connection: cell_24_22-cell_24_23 [max_link_capacity=100]
+hub: cell_0_24 0 1
+hub: cell_1_24 1 1
+connection: cell_1_23-cell_1_24 [max_link_capacity=100]
+connection: cell_0_24-cell_1_24 [max_link_capacity=100]
+hub: cell_2_24 2 1
+connection: cell_2_23-cell_2_24 [max_link_capacity=100]
+connection: cell_1_24-cell_2_24 [max_link_capacity=100]
+hub: cell_3_24 3 1
+hub: cell_4_24 4 1
+connection: cell_3_24-cell_4_24 [max_link_capacity=100]
+hub: cell_5_24 5 1
+connection: cell_4_24-cell_5_24 [max_link_capacity=100]
+hub: cell_6_24 6 1
+connection: cell_6_23-cell_6_24 [max_link_capacity=100]
+connection: cell_5_24-cell_6_24 [max_link_capacity=100]
+hub: cell_7_24 7 1
+connection: cell_7_23-cell_7_24 [max_link_capacity=100]
+hub: cell_8_24 8 1
+connection: cell_8_23-cell_8_24 [max_link_capacity=100]
+connection: cell_7_24-cell_8_24 [max_link_capacity=100]
+hub: cell_9_24 9 1
+connection: cell_9_23-cell_9_24 [max_link_capacity=100]
+connection: cell_8_24-cell_9_24 [max_link_capacity=100]
+hub: cell_10_24 10 1
+connection: cell_10_23-cell_10_24 [max_link_capacity=100]
+hub: cell_11_24 11 1
+connection: cell_11_23-cell_11_24 [max_link_capacity=100]
+hub: cell_12_24 12 1
+connection: cell_12_23-cell_12_24 [max_link_capacity=100]
+connection: cell_11_24-cell_12_24 [max_link_capacity=100]
+hub: cell_13_24 13 1
+connection: cell_12_24-cell_13_24 [max_link_capacity=100]
+hub: cell_14_24 14 1
+connection: cell_13_24-cell_14_24 [max_link_capacity=100]
+hub: cell_15_24 15 1
+connection: cell_15_23-cell_15_24 [max_link_capacity=100]
+connection: cell_14_24-cell_15_24 [max_link_capacity=100]
+hub: cell_16_24 16 1
+connection: cell_16_23-cell_16_24 [max_link_capacity=100]
+hub: cell_17_24 17 1
+connection: cell_16_24-cell_17_24 [max_link_capacity=100]
+hub: cell_18_24 18 1
+connection: cell_17_24-cell_18_24 [max_link_capacity=100]
+hub: cell_19_24 19 1
+connection: cell_18_24-cell_19_24 [max_link_capacity=100]
+hub: cell_20_24 20 1 [max_drones=10 color=blue]
+connection: cell_20_23-cell_20_24 [max_link_capacity=100]
+connection: cell_19_24-cell_20_24 [max_link_capacity=100]
+hub: cell_21_24 21 1 [max_drones=10 color=blue]
+connection: cell_21_23-cell_21_24 [max_link_capacity=100]
+connection: cell_20_24-cell_21_24 [max_link_capacity=100]
+hub: cell_22_24 22 1
+connection: cell_22_23-cell_22_24 [max_link_capacity=100]
+hub: cell_23_24 23 1 [max_drones=10 color=blue]
+connection: cell_23_23-cell_23_24 [max_link_capacity=100]
+end_hub: cell_24_24 24 1 [max_drones=10 color=blue]
+connection: cell_24_23-cell_24_24 [max_link_capacity=100]
+connection: cell_23_24-cell_24_24 [max_link_capacity=100]

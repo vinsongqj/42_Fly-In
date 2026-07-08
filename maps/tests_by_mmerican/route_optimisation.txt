@@ -1,0 +1,17 @@
+# Checking my drone's route planning.
+# I'm pretty sure my drone routing won't act optimally.
+nb_drones: 2
+
+start_hub: start -1 0 []
+hub: bottleneck 0 0 [zone=restricted]
+hub: slow_path 3 5 [zone=restricted]
+hub: fast_path 3 0 []
+end_hub: goal 6 0 []
+
+connection: start-bottleneck
+
+connection: bottleneck-slow_path
+connection: slow_path-goal
+
+connection: bottleneck-fast_path
+connection: fast_path-goal

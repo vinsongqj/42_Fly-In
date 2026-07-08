@@ -1,0 +1,30 @@
+# Simple map for testing the animation.
+nb_drones: 20
+
+start_hub: start 0 0 [color=green]
+hub: horizontal_straight 1 0 [max_drones=5]
+hub: vertical_straight 1 1 [max_drones=5]
+hub: diagonal_straight 2 2 [max_drones=5]
+hub: slow_horizontal_straight 3 2 [zone=restricted max_drones=5]
+hub: slow_vertical_straight 3 3 [zone=restricted max_drones=5]
+hub: slow_diagonal_straight 4 4 [zone=restricted max_drones=5]
+hub: slow_path_to_finish 1 4 [zone=restricted]
+end_hub: finish -1 3 [color=red]
+
+hub: priority_trap 0 1 [color=gold zone=priority]
+hub: blocked_path -1 2 [color=red zone=blocked]
+
+connection: start-horizontal_straight [max_link_capacity=5]
+connection: vertical_straight-horizontal_straight [max_link_capacity=5]
+connection: vertical_straight-diagonal_straight [max_link_capacity=5]
+connection: slow_horizontal_straight-diagonal_straight [max_link_capacity=5]
+connection: slow_horizontal_straight-slow_vertical_straight [max_link_capacity=5]
+connection: slow_diagonal_straight-slow_vertical_straight [max_link_capacity=5]
+connection: slow_diagonal_straight-finish [max_link_capacity=2]
+
+connection: slow_diagonal_straight-slow_path_to_finish
+connection: slow_path_to_finish-finish
+
+connection: start-priority_trap
+connection: priority_trap-blocked_path
+connection: blocked_path-finish

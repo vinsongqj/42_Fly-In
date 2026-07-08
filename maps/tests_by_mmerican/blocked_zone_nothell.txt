@@ -1,0 +1,1845 @@
+nb_drones: 25
+start_hub: start 25 50
+end_hub: end 75 50
+hub: 2 10 48
+hub: 3 58 54
+hub: 4 89 87
+hub: 7 78 99
+hub: 8 76 67
+hub: 9 40 9
+hub: 10 32 54
+hub: 11 80 39
+hub: 14 22 62
+hub: 16 3 59
+hub: 17 99 53
+hub: 18 4 99
+hub: 25 84 56
+hub: 26 13 52
+hub: 27 0 61
+hub: 29 24 41
+hub: 30 52 23
+hub: 31 32 27
+hub: 33 39 3
+hub: 35 95 76
+hub: 37 45 82
+hub: 40 57 49
+hub: 45 74 93
+hub: 47 76 39
+hub: 50 75 7
+hub: 52 72 7
+hub: 53 19 1
+hub: 54 6 18
+hub: 56 37 42
+hub: 57 83 3
+hub: 60 95 89
+hub: 62 49 2
+hub: 63 1 47
+hub: 64 34 5
+hub: 67 6 50
+hub: 68 81 78
+hub: 69 81 70
+hub: 72 57 25
+hub: 73 56 32
+hub: 78 62 28
+hub: 79 66 70
+hub: 81 67 0
+hub: 84 36 32
+hub: 86 96 79
+hub: 87 74 79
+hub: 93 37 18
+hub: 94 65 19
+hub: 95 88 52
+hub: 96 12 11
+hub: 97 64 34
+hub: 100 59 41
+hub: 101 95 73
+hub: 102 52 59
+hub: 103 42 18
+hub: 104 89 77
+hub: 108 29 6
+hub: 111 49 17
+hub: 114 14 40
+hub: 117 64 5
+hub: 118 74 68
+hub: 119 8 36
+hub: 121 28 88
+hub: 122 79 31
+hub: 123 5 70
+hub: 124 87 27
+hub: 127 5 12
+hub: 128 91 78
+hub: 129 28 83
+hub: 133 37 78
+hub: 135 61 60
+hub: 136 98 69
+hub: 137 43 87
+hub: 138 18 61
+hub: 139 37 13
+hub: 141 96 87
+hub: 142 34 88
+hub: 145 13 96
+hub: 147 14 25
+hub: 159 15 57
+hub: 160 73 78
+hub: 161 14 24
+hub: 164 54 18
+hub: 165 71 39
+hub: 166 20 96
+hub: 170 44 96
+hub: 173 56 25
+hub: 174 4 60
+hub: 175 63 0
+hub: 176 63 83
+hub: 178 13 69
+hub: 179 63 0
+hub: 180 25 70
+hub: 181 14 97
+hub: 182 45 53
+hub: 183 10 43
+hub: 184 96 86
+hub: 185 81 33
+hub: 186 95 26
+hub: 188 34 68
+hub: 189 64 21
+hub: 193 75 36
+hub: 196 64 20
+hub: 197 63 73
+hub: 198 81 45
+hub: 199 0 5
+hub: 200 73 12
+hub: 201 29 18
+hub: 202 79 30
+hub: 204 70 90
+hub: 205 81 44
+hub: 207 90 31
+hub: 209 43 74
+hub: 210 78 73
+hub: 211 14 92
+hub: 213 69 74
+hub: 214 62 39
+hub: 215 95 88
+hub: 216 68 59
+hub: 219 14 23
+hub: 221 65 38
+hub: 223 98 21
+hub: 225 71 61
+hub: 228 98 36
+hub: 230 61 30
+hub: 232 95 92
+hub: 233 75 45
+hub: 234 94 94
+hub: 236 6 19
+hub: 238 7 75
+hub: 239 70 87
+hub: 242 67 34
+hub: 244 32 47
+hub: 246 96 12
+hub: 247 61 36
+hub: 248 64 34
+hub: 250 1 52
+hub: 252 66 19
+hub: 253 54 82
+hub: 256 65 66
+hub: 261 13 47
+hub: 262 95 36
+hub: 264 58 71
+hub: 265 74 72
+hub: 266 32 41
+hub: 269 64 48
+hub: 270 79 3
+hub: 273 63 30
+hub: 274 89 47
+hub: 275 51 20
+hub: 276 71 81
+hub: 277 22 68
+hub: 278 39 79
+hub: 280 64 60
+hub: 284 80 95
+hub: 287 81 2
+hub: 289 92 21
+hub: 290 72 24
+hub: 291 4 10
+hub: 292 20 54
+hub: 293 1 50
+hub: 294 19 17
+hub: 296 69 33
+hub: 298 79 78
+hub: 299 31 35
+hub: 300 83 39
+hub: 301 50 94
+hub: 302 53 75
+hub: 304 0 19
+hub: 305 60 69
+hub: 307 57 39
+hub: 310 17 40
+hub: 311 4 62
+hub: 313 6 45
+hub: 314 31 62
+hub: 315 23 29
+hub: 316 38 56
+hub: 317 37 33
+hub: 319 56 44
+hub: 321 50 99
+hub: 323 53 51
+hub: 324 76 44
+hub: 327 17 43
+hub: 328 34 87
+hub: 329 86 1
+hub: 330 69 95
+hub: 331 23 38
+hub: 332 96 31
+hub: 333 31 30
+hub: 334 81 23
+hub: 338 90 5
+hub: 340 99 54
+hub: 341 68 87
+hub: 342 99 57
+hub: 343 77 65
+hub: 344 38 93
+hub: 345 98 87
+hub: 346 23 55
+hub: 347 75 17
+hub: 349 2 25
+hub: 350 86 22
+hub: 352 79 16
+hub: 353 8 70
+hub: 354 26 46
+hub: 356 82 95
+hub: 357 1 14
+hub: 360 54 65
+hub: 361 91 87
+hub: 362 25 77
+hub: 364 6 28
+hub: 365 48 78
+hub: 371 39 92
+hub: 373 4 28
+hub: 374 53 61
+hub: 375 90 86
+hub: 379 28 2
+hub: 380 93 6
+hub: 381 64 98
+hub: 382 97 75
+hub: 383 25 2
+hub: 384 91 25
+hub: 385 29 11
+hub: 387 89 47
+hub: 388 26 99
+hub: 389 46 55
+hub: 396 87 5
+hub: 399 94 65
+hub: 400 43 1
+hub: 401 37 28
+hub: 402 31 79
+hub: 406 36 72
+hub: 407 29 98
+hub: 409 61 36
+hub: 410 70 85
+hub: 411 94 6
+hub: 412 79 27
+hub: 415 4 85
+hub: 416 4 80
+hub: 422 90 14
+hub: 423 66 14
+hub: 424 76 90
+hub: 426 79 58
+hub: 427 95 57
+hub: 430 56 36
+hub: 431 52 27
+hub: 433 26 55
+hub: 436 6 3
+hub: 439 16 65
+hub: 440 61 8
+hub: 444 85 53
+hub: 445 64 26
+hub: 446 72 9
+hub: 447 1 66
+hub: 448 34 38
+hub: 449 63 82
+hub: 450 87 10
+hub: 451 54 18
+hub: 453 16 75
+hub: 455 38 95
+hub: 458 90 76
+hub: 459 66 37
+hub: 460 2 80
+hub: 461 69 6
+hub: 462 93 14
+hub: 464 2 66
+hub: 465 49 80
+hub: 466 47 34
+hub: 467 78 50
+hub: 468 54 27
+hub: 469 26 12
+hub: 470 65 30
+hub: 471 20 74
+hub: 473 13 89
+hub: 474 66 53
+hub: 481 72 59
+hub: 482 61 57
+hub: 484 4 92
+hub: 485 93 62
+hub: 487 71 71
+hub: 488 60 94
+hub: 490 1 75
+hub: 491 29 49
+hub: 492 89 91
+hub: 494 54 71
+hub: 495 9 7
+hub: 496 2 91
+hub: 498 57 60
+hub: 500 21 33
+hub: 501 85 74
+hub: 502 60 14
+hub: 503 7 19
+hub: 504 54 7
+hub: 506 56 0
+hub: 510 49 26
+hub: 515 14 99
+hub: 517 3 68
+hub: 518 90 55
+hub: 520 84 88
+hub: 524 59 23
+hub: 525 55 33
+hub: 526 90 42
+hub: 527 9 94
+hub: 528 8 52
+hub: 530 53 48
+hub: 533 64 23
+hub: 535 16 35
+hub: 536 35 94
+hub: 537 85 60
+hub: 539 7 20
+hub: 541 99 0
+hub: 542 71 80
+hub: 543 8 39
+hub: 544 23 8
+hub: 545 59 37
+hub: 547 21 35
+hub: 548 92 37
+hub: 549 53 77
+hub: 551 3 94
+hub: 553 98 95
+hub: 554 56 49
+hub: 556 45 71
+hub: 557 40 94
+hub: 558 49 95
+hub: 559 57 12
+hub: 561 0 88
+hub: 563 71 21
+hub: 564 73 50
+hub: 565 67 22
+hub: 566 25 30
+hub: 569 93 50
+hub: 571 82 74
+hub: 572 74 29
+hub: 573 92 91
+hub: 575 85 97
+hub: 576 80 40
+hub: 578 26 14
+hub: 579 89 27
+hub: 581 22 6
+hub: 582 81 10
+hub: 583 4 14
+hub: 584 49 33
+hub: 586 2 6
+hub: 587 30 26
+hub: 590 86 80
+hub: 591 48 46
+hub: 593 42 85
+hub: 594 93 48
+hub: 595 80 39
+hub: 596 15 66
+hub: 597 2 6
+hub: 598 90 76
+hub: 599 92 64
+hub: 601 42 39
+hub: 603 94 73
+hub: 604 10 11
+hub: 605 30 0
+hub: 606 1 14
+hub: 608 27 75
+hub: 611 21 0
+hub: 612 53 0
+hub: 613 29 36
+hub: 614 3 23
+hub: 615 35 66
+hub: 616 34 49
+hub: 620 75 68
+hub: 621 74 81
+hub: 622 17 79
+hub: 623 38 0
+hub: 626 34 80
+hub: 627 96 4
+hub: 628 57 41
+hub: 629 86 86
+hub: 631 70 86
+hub: 632 75 64
+hub: 633 66 51
+hub: 634 63 32
+hub: 635 29 18
+hub: 637 36 99
+hub: 638 44 39
+hub: 639 82 73
+hub: 640 61 28
+hub: 642 44 20
+hub: 643 31 53
+hub: 644 53 46
+hub: 645 51 96
+hub: 646 22 73
+hub: 648 98 88
+hub: 649 6 53
+hub: 650 13 87
+hub: 651 37 93
+hub: 652 5 60
+hub: 653 99 16
+hub: 654 44 96
+hub: 655 59 17
+hub: 659 42 54
+hub: 660 32 13
+hub: 661 97 16
+hub: 662 81 33
+hub: 663 96 41
+hub: 664 5 19
+hub: 665 0 56
+hub: 666 33 29
+hub: 668 91 17
+hub: 669 63 83
+hub: 670 21 15
+hub: 673 37 8
+hub: 674 48 30
+hub: 675 68 97
+hub: 676 45 51
+hub: 677 20 0
+hub: 678 90 20
+hub: 681 10 24
+hub: 682 96 2
+hub: 683 84 29
+hub: 684 53 51
+hub: 685 90 30
+hub: 687 33 17
+hub: 689 30 47
+hub: 690 95 87
+hub: 694 9 59
+hub: 695 83 70
+hub: 696 5 92
+hub: 697 18 63
+hub: 699 60 83
+hub: 700 48 8
+hub: 701 55 97
+hub: 702 39 38
+hub: 703 59 86
+hub: 704 18 2
+hub: 705 95 49
+hub: 706 90 64
+hub: 707 76 77
+hub: 708 64 35
+hub: 709 73 94
+hub: 710 91 3
+hub: 711 19 93
+hub: 712 67 20
+hub: 713 24 45
+hub: 714 40 69
+hub: 715 12 20
+hub: 717 99 86
+hub: 718 31 95
+hub: 720 42 24
+hub: 721 63 6
+hub: 722 64 34
+hub: 724 15 41
+hub: 725 99 69
+hub: 726 10 66
+hub: 727 92 45
+hub: 728 88 61
+hub: 729 30 18
+hub: 730 13 14
+hub: 731 46 48
+hub: 735 45 69
+hub: 736 99 59
+hub: 738 39 13
+hub: 739 29 32
+hub: 740 40 83
+hub: 741 29 98
+hub: 742 70 43
+hub: 743 9 14
+hub: 745 97 69
+hub: 748 78 14
+hub: 749 16 89
+hub: 750 65 36
+hub: 752 95 29
+hub: 754 14 25
+hub: 755 5 75
+hub: 756 32 97
+hub: 757 78 30
+hub: 759 78 46
+hub: 761 88 10
+hub: 763 4 81
+hub: 766 96 40
+hub: 767 66 3
+hub: 768 5 2
+hub: 769 3 40
+hub: 770 72 59
+hub: 771 99 29
+hub: 775 43 30
+hub: 777 24 11
+hub: 778 48 67
+hub: 779 35 19
+hub: 780 24 88
+hub: 781 90 91
+hub: 783 79 92
+hub: 784 31 75
+hub: 785 24 82
+hub: 786 44 37
+hub: 787 73 5
+hub: 788 54 59
+hub: 791 43 90
+hub: 794 15 54
+hub: 795 55 38
+hub: 798 68 8
+hub: 799 92 68
+hub: 800 42 45
+hub: 801 35 63
+hub: 802 44 61
+hub: 803 86 99
+hub: 804 96 18
+hub: 805 57 88
+hub: 807 80 86
+hub: 809 12 79
+hub: 810 92 54
+hub: 811 76 76
+hub: 813 14 60
+hub: 814 20 89
+hub: 815 37 45
+hub: 817 27 93
+hub: 818 2 79
+hub: 819 45 18
+hub: 820 71 88
+hub: 821 28 97
+hub: 822 97 66
+hub: 825 38 68
+hub: 826 96 12
+hub: 828 68 59
+hub: 831 78 7
+hub: 832 80 12
+hub: 833 20 12
+hub: 835 83 66
+hub: 836 54 93
+hub: 837 7 4
+hub: 839 79 53
+hub: 840 52 13
+hub: 841 56 90
+hub: 843 49 54
+hub: 844 17 39
+hub: 846 36 86
+hub: 847 71 44
+hub: 850 45 20
+hub: 851 62 15
+hub: 853 14 2
+hub: 855 62 88
+hub: 858 69 88
+hub: 860 62 66
+hub: 861 95 99
+hub: 862 62 40
+hub: 863 29 67
+hub: 864 22 63
+hub: 865 94 4
+hub: 866 63 94
+hub: 868 51 41
+hub: 870 54 47
+hub: 872 76 35
+hub: 873 63 46
+hub: 874 79 38
+hub: 875 75 21
+hub: 876 65 4
+hub: 877 22 79
+hub: 878 25 62
+hub: 879 52 6
+hub: 880 42 46
+hub: 881 79 41
+hub: 882 76 57
+hub: 883 25 86
+hub: 884 82 74
+hub: 888 16 48
+hub: 889 22 26
+hub: 890 76 82
+hub: 891 87 84
+hub: 893 38 59
+hub: 894 71 27
+hub: 896 88 37
+hub: 898 67 7
+hub: 900 10 77
+hub: 901 64 5
+hub: 902 56 46
+hub: 903 77 89
+hub: 904 46 7
+hub: 905 62 76
+hub: 906 39 25
+hub: 907 29 59
+hub: 908 58 95
+hub: 909 54 2
+hub: 910 18 66
+hub: 911 14 54
+hub: 913 39 6
+hub: 914 39 48
+hub: 915 47 9
+hub: 916 78 3
+hub: 917 16 99
+hub: 920 96 49
+hub: 922 65 30
+hub: 923 48 63
+hub: 925 49 72
+hub: 926 53 66
+hub: 927 0 43
+hub: 928 62 9
+hub: 931 49 98
+hub: 932 60 53
+hub: 933 97 35
+hub: 934 9 30
+hub: 936 67 13
+hub: 938 54 50
+hub: 940 44 76
+hub: 941 98 61
+hub: 942 99 75
+hub: 943 55 11
+hub: 946 42 65
+hub: 947 33 25
+hub: 948 0 14
+hub: 949 3 11
+hub: 951 53 77
+hub: 952 36 72
+hub: 953 4 40
+hub: 954 60 30
+hub: 955 89 12
+hub: 956 20 3
+hub: 957 18 31
+hub: 958 71 87
+hub: 959 98 85
+hub: 960 97 85
+hub: 961 32 36
+hub: 963 33 2
+hub: 964 79 80
+hub: 968 22 20
+hub: 969 25 26
+hub: 970 70 15
+hub: 972 83 24
+hub: 973 88 39
+hub: 974 46 2
+hub: 975 53 12
+hub: 976 15 18
+hub: 977 14 47
+hub: 978 80 17
+hub: 979 84 4
+hub: 980 39 1
+hub: 981 60 79
+hub: 983 66 43
+hub: 984 0 86
+hub: 985 8 50
+hub: 987 14 81
+hub: 988 34 59
+hub: 989 53 69
+hub: 990 43 94
+hub: 992 27 56
+hub: 993 25 28
+hub: 994 62 55
+hub: 996 36 20
+hub: 997 87 69
+hub: 999 10 34
+connection: 16-27
+connection: 11-47
+connection: 50-52
+connection: 2-67
+connection: 35-86
+connection: 35-101
+connection: 8-118
+connection: 35-128
+connection: 104-128
+connection: 14-138
+connection: 60-141
+connection: 87-160
+connection: 147-161
+connection: 30-173
+connection: 72-173
+connection: 16-174
+connection: 27-174
+connection: 81-175
+connection: 81-179
+connection: 175-179
+connection: 145-181
+connection: 60-184
+connection: 141-184
+connection: 122-185
+connection: 94-189
+connection: 47-193
+connection: 94-196
+connection: 189-196
+connection: 79-197
+connection: 122-202
+connection: 185-202
+connection: 198-205
+connection: 69-210
+connection: 145-211
+connection: 100-214
+connection: 60-215
+connection: 141-215
+connection: 184-215
+connection: 147-219
+connection: 161-219
+connection: 97-221
+connection: 214-221
+connection: 216-225
+connection: 78-230
+connection: 60-232
+connection: 215-232
+connection: 232-234
+connection: 54-236
+connection: 204-239
+connection: 97-242
+connection: 221-242
+connection: 97-247
+connection: 214-247
+connection: 221-247
+connection: 97-248
+connection: 221-248
+connection: 242-248
+connection: 247-248
+connection: 94-252
+connection: 189-252
+connection: 196-252
+connection: 79-256
+connection: 2-261
+connection: 228-262
+connection: 118-265
+connection: 210-265
+connection: 57-270
+connection: 78-273
+connection: 97-273
+connection: 230-273
+connection: 248-273
+connection: 30-275
+connection: 111-275
+connection: 164-275
+connection: 87-276
+connection: 160-276
+connection: 180-277
+connection: 133-278
+connection: 135-280
+connection: 216-280
+connection: 7-284
+connection: 57-287
+connection: 270-287
+connection: 127-291
+connection: 63-293
+connection: 250-293
+connection: 242-296
+connection: 68-298
+connection: 11-300
+connection: 264-305
+connection: 100-307
+connection: 114-310
+connection: 16-311
+connection: 27-311
+connection: 174-311
+connection: 183-313
+connection: 84-317
+connection: 100-319
+connection: 40-323
+connection: 233-324
+connection: 114-327
+connection: 310-327
+connection: 142-328
+connection: 57-329
+connection: 29-331
+connection: 31-333
+connection: 17-340
+connection: 204-341
+connection: 239-341
+connection: 17-342
+connection: 340-342
+connection: 8-343
+connection: 118-343
+connection: 60-345
+connection: 141-345
+connection: 184-345
+connection: 215-345
+connection: 292-346
+connection: 347-352
+connection: 123-353
+connection: 284-356
+connection: 127-357
+connection: 4-361
+connection: 60-361
+connection: 215-361
+connection: 344-371
+connection: 349-373
+connection: 364-373
+connection: 102-374
+connection: 360-374
+connection: 4-375
+connection: 361-375
+connection: 108-379
+connection: 338-380
+connection: 35-382
+connection: 86-382
+connection: 101-382
+connection: 379-383
+connection: 124-384
+connection: 186-384
+connection: 289-384
+connection: 274-387
+connection: 182-389
+connection: 57-396
+connection: 329-396
+connection: 338-396
+connection: 33-400
+connection: 84-401
+connection: 188-406
+connection: 388-407
+connection: 97-409
+connection: 214-409
+connection: 221-409
+connection: 247-409
+connection: 248-409
+connection: 239-410
+connection: 276-410
+connection: 341-410
+connection: 338-411
+connection: 380-411
+connection: 122-412
+connection: 202-412
+connection: 334-412
+connection: 45-424
+connection: 342-427
+connection: 73-430
+connection: 307-430
+connection: 30-431
+connection: 173-431
+connection: 346-433
+connection: 138-439
+connection: 117-440
+connection: 25-444
+connection: 95-444
+connection: 78-445
+connection: 273-445
+connection: 50-446
+connection: 52-446
+connection: 200-446
+connection: 266-448
+connection: 299-448
+connection: 176-449
+connection: 164-451
+connection: 275-451
+connection: 344-455
+connection: 371-455
+connection: 104-458
+connection: 128-458
+connection: 97-459
+connection: 214-459
+connection: 221-459
+connection: 242-459
+connection: 248-459
+connection: 416-460
+connection: 52-461
+connection: 446-461
+connection: 246-462
+connection: 422-462
+connection: 311-464
+connection: 447-464
+connection: 37-465
+connection: 365-465
+connection: 30-468
+connection: 72-468
+connection: 173-468
+connection: 431-468
+connection: 385-469
+connection: 78-470
+connection: 97-470
+connection: 230-470
+connection: 242-470
+connection: 248-470
+connection: 273-470
+connection: 445-470
+connection: 453-471
+connection: 211-473
+connection: 216-481
+connection: 225-481
+connection: 3-482
+connection: 135-482
+connection: 280-482
+connection: 399-485
+connection: 118-487
+connection: 213-487
+connection: 265-487
+connection: 244-491
+connection: 354-491
+connection: 4-492
+connection: 361-492
+connection: 264-494
+connection: 302-494
+connection: 484-496
+connection: 135-498
+connection: 374-498
+connection: 315-500
+connection: 54-503
+connection: 236-503
+connection: 30-510
+connection: 431-510
+connection: 145-515
+connection: 181-515
+connection: 123-517
+connection: 447-517
+connection: 464-517
+connection: 95-518
+connection: 72-524
+connection: 173-524
+connection: 73-525
+connection: 430-525
+connection: 145-527
+connection: 2-528
+connection: 67-528
+connection: 40-530
+connection: 323-530
+connection: 94-533
+connection: 189-533
+connection: 196-533
+connection: 252-533
+connection: 445-533
+connection: 344-536
+connection: 371-536
+connection: 455-536
+connection: 25-537
+connection: 54-539
+connection: 236-539
+connection: 503-539
+connection: 87-542
+connection: 160-542
+connection: 276-542
+connection: 119-543
+connection: 183-543
+connection: 100-545
+connection: 214-545
+connection: 247-545
+connection: 307-545
+connection: 409-545
+connection: 430-545
+connection: 331-547
+connection: 500-547
+connection: 262-548
+connection: 302-549
+connection: 484-551
+connection: 496-551
+connection: 232-553
+connection: 234-553
+connection: 40-554
+connection: 323-554
+connection: 530-554
+connection: 209-556
+connection: 170-557
+connection: 344-557
+connection: 371-557
+connection: 455-557
+connection: 301-558
+connection: 321-558
+connection: 502-559
+connection: 496-561
+connection: 290-563
+connection: 94-565
+connection: 189-565
+connection: 196-565
+connection: 252-565
+connection: 533-565
+connection: 563-565
+connection: 315-566
+connection: 68-571
+connection: 69-571
+connection: 210-571
+connection: 501-571
+connection: 60-573
+connection: 215-573
+connection: 232-573
+connection: 234-573
+connection: 361-573
+connection: 492-573
+connection: 356-575
+connection: 11-576
+connection: 47-576
+connection: 205-576
+connection: 300-576
+connection: 385-578
+connection: 469-578
+connection: 124-579
+connection: 207-579
+connection: 384-579
+connection: 544-581
+connection: 54-583
+connection: 127-583
+connection: 291-583
+connection: 357-583
+connection: 466-584
+connection: 199-586
+connection: 291-586
+connection: 31-587
+connection: 333-587
+connection: 104-590
+connection: 37-593
+connection: 137-593
+connection: 274-594
+connection: 387-594
+connection: 569-594
+connection: 11-595
+connection: 47-595
+connection: 300-595
+connection: 576-595
+connection: 178-596
+connection: 439-596
+connection: 199-597
+connection: 291-597
+connection: 586-597
+connection: 104-598
+connection: 128-598
+connection: 458-598
+connection: 399-599
+connection: 485-599
+connection: 35-603
+connection: 101-603
+connection: 382-603
+connection: 96-604
+connection: 495-604
+connection: 379-605
+connection: 127-606
+connection: 357-606
+connection: 583-606
+connection: 362-608
+connection: 53-611
+connection: 383-611
+connection: 62-612
+connection: 506-612
+connection: 299-613
+connection: 349-614
+connection: 188-615
+connection: 244-616
+connection: 8-620
+connection: 118-620
+connection: 265-620
+connection: 343-620
+connection: 87-621
+connection: 160-621
+connection: 276-621
+connection: 542-621
+connection: 453-622
+connection: 33-623
+connection: 133-626
+connection: 402-626
+connection: 380-627
+connection: 411-627
+connection: 100-628
+connection: 307-628
+connection: 319-628
+connection: 545-628
+connection: 4-629
+connection: 375-629
+connection: 520-629
+connection: 204-631
+connection: 239-631
+connection: 341-631
+connection: 410-631
+connection: 8-632
+connection: 118-632
+connection: 343-632
+connection: 620-632
+connection: 269-633
+connection: 474-633
+connection: 78-634
+connection: 97-634
+connection: 230-634
+connection: 242-634
+connection: 247-634
+connection: 248-634
+connection: 273-634
+connection: 409-634
+connection: 470-634
+connection: 201-635
+connection: 455-637
+connection: 601-638
+connection: 69-639
+connection: 210-639
+connection: 501-639
+connection: 571-639
+connection: 78-640
+connection: 230-640
+connection: 273-640
+connection: 445-640
+connection: 470-640
+connection: 634-640
+connection: 103-642
+connection: 10-643
+connection: 491-643
+connection: 319-644
+connection: 530-644
+connection: 554-644
+connection: 301-645
+connection: 321-645
+connection: 558-645
+connection: 180-646
+connection: 471-646
+connection: 60-648
+connection: 141-648
+connection: 184-648
+connection: 215-648
+connection: 345-648
+connection: 67-649
+connection: 528-649
+connection: 473-650
+connection: 344-651
+connection: 371-651
+connection: 455-651
+connection: 536-651
+connection: 557-651
+connection: 16-652
+connection: 174-652
+connection: 311-652
+connection: 170-654
+connection: 557-654
+connection: 502-655
+connection: 182-659
+connection: 316-659
+connection: 389-659
+connection: 385-660
+connection: 246-661
+connection: 462-661
+connection: 653-661
+connection: 122-662
+connection: 185-662
+connection: 202-662
+connection: 54-664
+connection: 236-664
+connection: 503-664
+connection: 539-664
+connection: 614-664
+connection: 16-665
+connection: 250-665
+connection: 31-666
+connection: 84-666
+connection: 333-666
+connection: 401-666
+connection: 587-666
+connection: 289-668
+connection: 422-668
+connection: 462-668
+connection: 176-669
+connection: 449-669
+connection: 294-670
+connection: 9-673
+connection: 64-673
+connection: 466-674
+connection: 510-674
+connection: 584-674
+connection: 330-675
+connection: 381-675
+connection: 182-676
+connection: 389-676
+connection: 659-676
+connection: 53-677
+connection: 611-677
+connection: 289-678
+connection: 350-678
+connection: 668-678
+connection: 147-681
+connection: 161-681
+connection: 219-681
+connection: 411-682
+connection: 541-682
+connection: 627-682
+connection: 124-683
+connection: 40-684
+connection: 323-684
+connection: 530-684
+connection: 554-684
+connection: 124-685
+connection: 207-685
+connection: 579-685
+connection: 93-687
+connection: 201-687
+connection: 635-687
+connection: 660-687
+connection: 244-689
+connection: 354-689
+connection: 491-689
+connection: 616-689
+connection: 60-690
+connection: 141-690
+connection: 184-690
+connection: 215-690
+connection: 345-690
+connection: 361-690
+connection: 648-690
+connection: 652-694
+connection: 69-695
+connection: 501-695
+connection: 571-695
+connection: 639-695
+connection: 484-696
+connection: 496-696
+connection: 527-696
+connection: 551-696
+connection: 14-697
+connection: 138-697
+connection: 439-697
+connection: 596-697
+connection: 176-699
+connection: 449-699
+connection: 669-699
+connection: 645-701
+connection: 56-702
+connection: 601-702
+connection: 699-703
+connection: 53-704
+connection: 611-704
+connection: 677-704
+connection: 569-705
+connection: 594-705
+connection: 399-706
+connection: 485-706
+connection: 599-706
+connection: 87-707
+connection: 160-707
+connection: 210-707
+connection: 298-707
+connection: 621-707
+connection: 97-708
+connection: 214-708
+connection: 221-708
+connection: 242-708
+connection: 247-708
+connection: 248-708
+connection: 409-708
+connection: 459-708
+connection: 634-708
+connection: 45-709
+connection: 330-709
+connection: 338-710
+connection: 380-710
+connection: 396-710
+connection: 411-710
+connection: 166-711
+connection: 94-712
+connection: 189-712
+connection: 196-712
+connection: 252-712
+connection: 533-712
+connection: 563-712
+connection: 565-712
+connection: 29-713
+connection: 354-713
+connection: 161-715
+connection: 219-715
+connection: 681-715
+connection: 141-717
+connection: 184-717
+connection: 215-717
+connection: 345-717
+connection: 648-717
+connection: 690-717
+connection: 407-718
+connection: 536-718
+connection: 642-720
+connection: 117-721
+connection: 440-721
+connection: 97-722
+connection: 221-722
+connection: 242-722
+connection: 247-722
+connection: 248-722
+connection: 273-722
+connection: 409-722
+connection: 459-722
+connection: 470-722
+connection: 634-722
+connection: 708-722
+connection: 114-724
+connection: 310-724
+connection: 327-724
+connection: 136-725
+connection: 178-726
+connection: 353-726
+connection: 274-727
+connection: 387-727
+connection: 526-727
+connection: 594-727
+connection: 537-728
+connection: 706-728
+connection: 201-729
+connection: 635-729
+connection: 687-729
+connection: 96-730
+connection: 604-730
+connection: 591-731
+connection: 676-731
+connection: 556-735
+connection: 342-736
+connection: 427-736
+connection: 9-738
+connection: 139-738
+connection: 299-739
+connection: 333-739
+connection: 566-739
+connection: 613-739
+connection: 278-740
+connection: 593-740
+connection: 388-741
+connection: 407-741
+connection: 718-741
+connection: 165-742
+connection: 96-743
+connection: 127-743
+connection: 604-743
+connection: 730-743
+connection: 101-745
+connection: 136-745
+connection: 725-745
+connection: 347-748
+connection: 352-748
+connection: 211-749
+connection: 473-749
+connection: 650-749
+connection: 97-750
+connection: 214-750
+connection: 221-750
+connection: 242-750
+connection: 247-750
+connection: 248-750
+connection: 409-750
+connection: 459-750
+connection: 634-750
+connection: 708-750
+connection: 722-750
+connection: 186-752
+connection: 332-752
+connection: 147-754
+connection: 161-754
+connection: 219-754
+connection: 681-754
+connection: 238-755
+connection: 490-755
+connection: 407-756
+connection: 536-756
+connection: 637-756
+connection: 718-756
+connection: 741-756
+connection: 122-757
+connection: 185-757
+connection: 202-757
+connection: 412-757
+connection: 572-757
+connection: 662-757
+connection: 198-759
+connection: 205-759
+connection: 233-759
+connection: 324-759
+connection: 467-759
+connection: 422-761
+connection: 450-761
+connection: 415-763
+connection: 416-763
+connection: 460-763
+connection: 228-766
+connection: 262-766
+connection: 663-766
+connection: 81-767
+connection: 117-767
+connection: 175-767
+connection: 179-767
+connection: 461-767
+connection: 721-767
+connection: 436-768
+connection: 216-770
+connection: 225-770
+connection: 481-770
+connection: 332-771
+connection: 752-771
+connection: 469-777
+connection: 544-777
+connection: 578-777
+connection: 735-778
+connection: 93-779
+connection: 687-779
+connection: 121-780
+connection: 4-781
+connection: 361-781
+connection: 492-781
+connection: 573-781
+connection: 284-783
+connection: 356-783
+connection: 424-783
+connection: 402-784
+connection: 608-784
+connection: 129-785
+connection: 466-786
+connection: 601-786
+connection: 638-786
+connection: 50-787
+connection: 52-787
+connection: 446-787
+connection: 461-787
+connection: 102-788
+connection: 374-788
+connection: 498-788
+connection: 137-791
+connection: 371-791
+connection: 26-794
+connection: 159-794
+connection: 307-795
+connection: 430-795
+connection: 545-795
+connection: 628-795
+connection: 52-798
+connection: 446-798
+connection: 461-798
+connection: 399-799
+connection: 599-799
+connection: 706-799
+connection: 314-801
+connection: 615-801
+connection: 575-803
+connection: 223-804
+connection: 653-804
+connection: 661-804
+connection: 703-805
+connection: 520-807
+connection: 95-810
+connection: 427-810
+connection: 518-810
+connection: 569-810
+connection: 87-811
+connection: 160-811
+connection: 210-811
+connection: 265-811
+connection: 298-811
+connection: 707-811
+connection: 138-813
+connection: 159-813
+connection: 711-814
+connection: 749-814
+connection: 780-814
+connection: 56-815
+connection: 718-817
+connection: 416-818
+connection: 460-818
+connection: 490-818
+connection: 763-818
+connection: 103-819
+connection: 111-819
+connection: 642-819
+connection: 204-820
+connection: 239-820
+connection: 341-820
+connection: 410-820
+connection: 631-820
+connection: 388-821
+connection: 407-821
+connection: 718-821
+connection: 741-821
+connection: 756-821
+connection: 817-821
+connection: 136-822
+connection: 399-822
+connection: 725-822
+connection: 745-822
+connection: 188-825
+connection: 406-825
+connection: 615-825
+connection: 714-825
+connection: 246-826
+connection: 462-826
+connection: 661-826
+connection: 216-828
+connection: 225-828
+connection: 280-828
+connection: 481-828
+connection: 770-828
+connection: 50-831
+connection: 270-831
+connection: 582-831
+connection: 352-832
+connection: 582-832
+connection: 748-832
+connection: 670-833
+connection: 777-833
+connection: 69-835
+connection: 695-835
+connection: 301-836
+connection: 645-836
+connection: 701-836
+connection: 436-837
+connection: 495-837
+connection: 768-837
+connection: 467-839
+connection: 805-841
+connection: 836-841
+connection: 182-843
+connection: 389-843
+connection: 114-844
+connection: 310-844
+connection: 327-844
+connection: 535-844
+connection: 724-844
+connection: 142-846
+connection: 328-846
+connection: 233-847
+connection: 742-847
+connection: 103-850
+connection: 642-850
+connection: 819-850
+connection: 423-851
+connection: 502-851
+connection: 655-851
+connection: 704-853
+connection: 703-855
+connection: 204-858
+connection: 239-858
+connection: 341-858
+connection: 410-858
+connection: 631-858
+connection: 820-858
+connection: 256-860
+connection: 305-860
+connection: 100-862
+connection: 214-862
+connection: 221-862
+connection: 247-862
+connection: 409-862
+connection: 545-862
+connection: 14-864
+connection: 138-864
+connection: 697-864
+connection: 338-865
+connection: 380-865
+connection: 411-865
+connection: 627-865
+connection: 682-865
+connection: 710-865
+connection: 381-866
+connection: 488-866
+connection: 40-870
+connection: 319-870
+connection: 323-870
+connection: 530-870
+connection: 554-870
+connection: 644-870
+connection: 684-870
+connection: 47-872
+connection: 193-872
+connection: 269-873
+connection: 11-874
+connection: 47-874
+connection: 193-874
+connection: 300-874
+connection: 576-874
+connection: 595-874
+connection: 872-874
+connection: 290-875
+connection: 347-875
+connection: 563-875
+connection: 81-876
+connection: 117-876
+connection: 175-876
+connection: 179-876
+connection: 461-876
+connection: 721-876
+connection: 767-876
+connection: 362-877
+connection: 785-877
+connection: 14-878
+connection: 864-878
+connection: 504-879
+connection: 700-879
+connection: 731-880
+connection: 800-880
+connection: 11-881
+connection: 47-881
+connection: 198-881
+connection: 205-881
+connection: 300-881
+connection: 324-881
+connection: 576-881
+connection: 595-881
+connection: 874-881
+connection: 426-882
+connection: 481-882
+connection: 770-882
+connection: 121-883
+connection: 129-883
+connection: 780-883
+connection: 785-883
+connection: 68-884
+connection: 69-884
+connection: 210-884
+connection: 501-884
+connection: 571-884
+connection: 639-884
+connection: 695-884
+connection: 261-888
+connection: 315-889
+connection: 87-890
+connection: 621-890
+connection: 4-891
+connection: 375-891
+connection: 590-891
+connection: 629-891
+connection: 316-893
+connection: 290-894
+connection: 572-894
+connection: 548-896
+connection: 117-898
+connection: 461-898
+connection: 721-898
+connection: 767-898
+connection: 798-898
+connection: 876-898
+connection: 238-900
+connection: 809-900
+connection: 117-901
+connection: 440-901
+connection: 721-901
+connection: 767-901
+connection: 876-901
+connection: 898-901
+connection: 40-902
+connection: 319-902
+connection: 530-902
+connection: 554-902
+connection: 644-902
+connection: 870-902
+connection: 424-903
+connection: 783-903
+connection: 807-903
+connection: 700-904
+connection: 197-905
+connection: 401-906
+connection: 720-906
+connection: 314-907
+connection: 488-908
+connection: 701-908
+connection: 836-908
+connection: 506-909
+connection: 612-909
+connection: 879-909
+connection: 277-910
+connection: 439-910
+connection: 596-910
+connection: 697-910
+connection: 26-911
+connection: 159-911
+connection: 794-911
+connection: 9-913
+connection: 33-913
+connection: 673-913
+connection: 800-914
+connection: 815-914
+connection: 880-914
+connection: 700-915
+connection: 904-915
+connection: 270-916
+connection: 287-916
+connection: 831-916
+connection: 145-917
+connection: 181-917
+connection: 515-917
+connection: 569-920
+connection: 594-920
+connection: 705-920
+connection: 78-922
+connection: 97-922
+connection: 230-922
+connection: 242-922
+connection: 248-922
+connection: 273-922
+connection: 445-922
+connection: 470-922
+connection: 634-922
+connection: 640-922
+connection: 722-922
+connection: 778-923
+connection: 802-923
+connection: 556-925
+connection: 360-926
+connection: 63-927
+connection: 769-927
+connection: 117-928
+connection: 440-928
+connection: 721-928
+connection: 901-928
+connection: 301-931
+connection: 321-931
+connection: 558-931
+connection: 645-931
+connection: 3-932
+connection: 482-932
+connection: 228-933
+connection: 262-933
+connection: 332-933
+connection: 364-934
+connection: 423-936
+connection: 40-938
+connection: 323-938
+connection: 530-938
+connection: 554-938
+connection: 644-938
+connection: 684-938
+connection: 870-938
+connection: 902-938
+connection: 209-940
+connection: 365-940
+connection: 342-941
+connection: 736-941
+connection: 35-942
+connection: 101-942
+connection: 382-942
+connection: 504-943
+connection: 559-943
+connection: 840-943
+connection: 714-946
+connection: 802-946
+connection: 31-947
+connection: 587-947
+connection: 666-947
+connection: 357-948
+connection: 583-948
+connection: 606-948
+connection: 127-949
+connection: 291-949
+connection: 357-949
+connection: 583-949
+connection: 606-949
+connection: 948-949
+connection: 302-951
+connection: 549-951
+connection: 188-952
+connection: 406-952
+connection: 825-952
+connection: 543-953
+connection: 769-953
+connection: 73-954
+connection: 78-954
+connection: 230-954
+connection: 273-954
+connection: 634-954
+connection: 640-954
+connection: 422-955
+connection: 450-955
+connection: 462-955
+connection: 761-955
+connection: 53-956
+connection: 581-956
+connection: 611-956
+connection: 677-956
+connection: 704-956
+connection: 500-957
+connection: 535-957
+connection: 204-958
+connection: 239-958
+connection: 341-958
+connection: 410-958
+connection: 631-958
+connection: 820-958
+connection: 858-958
+connection: 141-959
+connection: 184-959
+connection: 215-959
+connection: 345-959
+connection: 648-959
+connection: 690-959
+connection: 717-959
+connection: 60-960
+connection: 141-960
+connection: 184-960
+connection: 215-960
+connection: 345-960
+connection: 648-960
+connection: 690-960
+connection: 717-960
+connection: 959-960
+connection: 299-961
+connection: 448-961
+connection: 613-961
+connection: 64-963
+connection: 605-963
+connection: 68-964
+connection: 298-964
+connection: 707-964
+connection: 890-964
+connection: 294-968
+connection: 315-969
+connection: 566-969
+connection: 889-969
+connection: 200-970
+connection: 423-970
+connection: 936-970
+connection: 334-972
+connection: 350-972
+connection: 526-973
+connection: 548-973
+connection: 896-973
+connection: 62-974
+connection: 400-974
+connection: 559-975
+connection: 840-975
+connection: 943-975
+connection: 294-976
+connection: 715-976
+connection: 730-976
+connection: 2-977
+connection: 261-977
+connection: 888-977
+connection: 352-978
+connection: 748-978
+connection: 57-979
+connection: 287-979
+connection: 329-979
+connection: 396-979
+connection: 33-980
+connection: 400-980
+connection: 623-980
+connection: 449-981
+connection: 699-981
+connection: 905-981
+connection: 742-983
+connection: 873-983
+connection: 415-984
+connection: 561-984
+connection: 2-985
+connection: 67-985
+connection: 528-985
+connection: 649-985
+connection: 622-987
+connection: 809-987
+connection: 314-988
+connection: 801-988
+connection: 893-988
+connection: 360-989
+connection: 494-989
+connection: 926-989
+connection: 170-990
+connection: 371-990
+connection: 557-990
+connection: 654-990
+connection: 791-990
+connection: 346-992
+connection: 433-992
+connection: 907-992
+connection: 315-993
+connection: 566-993
+connection: 889-993
+connection: 969-993
+connection: 3-994
+connection: 474-994
+connection: 482-994
+connection: 932-994
+connection: 93-996
+connection: 687-996
+connection: 779-996
+connection: 695-997
+connection: 119-999
+connection: 934-999
+connection: 354-start
+connection: 491-start
+connection: 467-end
+connection: 564-end

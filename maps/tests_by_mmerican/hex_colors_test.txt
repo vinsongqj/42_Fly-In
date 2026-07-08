@@ -1,0 +1,69 @@
+nb_drones: 20
+
+start_hub: start 0 0 [color=green]
+hub: rainbow_road_1 1 0 [color=#ff0000]
+hub: rainbow_road_2 2 0 [color=#ff4000]
+hub: rainbow_road_3 3 0 [color=#ff8000]
+hub: rainbow_road_4 4 0 [color=#ffc000]
+hub: rainbow_road_5 5 0 [color=#ffff00]
+hub: rainbow_road_6 6 0 [color=#c0ff00]
+hub: rainbow_road_7 7 0 [color=#80ff00]
+hub: rainbow_road_8 8 0 [color=#40ff00]
+hub: rainbow_road_9 9 0 [color=#00ff00]
+hub: rainbow_road_10 10 0 [color=#00ff40]
+hub: rainbow_road_11 11 0 [color=#00ff80]
+hub: rainbow_road_12 12 0 [color=#00ffc0]
+hub: rainbow_road_13 13 0 [color=#00ffff]
+hub: rainbow_road_14 14 0 [color=#00c0ff]
+hub: rainbow_road_15 15 0 [color=#0080ff]
+hub: rainbow_road_16 16 0 [color=#0040ff]
+hub: rainbow_road_17 17 0 [color=#0000ff]
+hub: rainbow_road_18 18 0 [color=#4000ff]
+hub: rainbow_road_19 19 0 [color=#8000ff]
+hub: rainbow_road_20 20 0 [color=#c000ff]
+hub: rainbow_road_21 21 0 [color=#ff00ff]
+hub: rainbow_road_22 22 0 [color=#ff00c0]
+hub: rainbow_road_23 23 0 [color=#ff0080]
+hub: rainbow_road_24 24 0 [color=#FF0040]
+end_hub: finish 25 0 [color=red]
+
+connection: start-rainbow_road_1
+connection: rainbow_road_2-rainbow_road_1
+connection: rainbow_road_2-rainbow_road_3
+connection: rainbow_road_4-rainbow_road_3
+connection: rainbow_road_4-rainbow_road_5
+connection: rainbow_road_6-rainbow_road_5
+connection: rainbow_road_6-rainbow_road_7
+connection: rainbow_road_8-rainbow_road_7
+connection: rainbow_road_8-rainbow_road_9
+connection: rainbow_road_10-rainbow_road_9
+connection: rainbow_road_10-rainbow_road_11
+connection: rainbow_road_12-rainbow_road_11
+connection: rainbow_road_12-rainbow_road_13
+connection: rainbow_road_14-rainbow_road_13
+connection: rainbow_road_14-rainbow_road_15
+connection: rainbow_road_16-rainbow_road_15
+connection: rainbow_road_16-rainbow_road_17
+connection: rainbow_road_18-rainbow_road_17
+connection: rainbow_road_18-rainbow_road_19
+connection: rainbow_road_20-rainbow_road_19
+connection: rainbow_road_20-rainbow_road_21
+connection: rainbow_road_22-rainbow_road_21
+connection: rainbow_road_22-rainbow_road_23
+connection: rainbow_road_24-rainbow_road_23
+connection: rainbow_road_24-finish
+
+hub: pink_corruption_0 0 5 [zone=restricted color=#ff0040]
+hub: pink_corruption_1 5 5 [zone=restricted color=#ff0000]
+hub: pink_corruption_2 10 5 [zone=restricted color=#meowft]
+hub: pink_corruption_3 15 5 [zone=restricted color=#f04]
+hub: pink_corruption_4 20 5 [zone=restricted color=#ff0000b]
+hub: pink_corruption_5 25 5 [zone=restricted color=pink]
+
+connection: start-pink_corruption_0
+connection: pink_corruption_1-pink_corruption_0
+connection: pink_corruption_1-pink_corruption_2
+connection: pink_corruption_3-pink_corruption_2
+connection: pink_corruption_3-pink_corruption_4
+connection: pink_corruption_5-pink_corruption_4
+connection: pink_corruption_5-finish

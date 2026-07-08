@@ -1,0 +1,19 @@
+# Simple map for testing the animation.
+nb_drones: 1
+
+start_hub: start 0 0 [color=green]
+hub: horizontal_straight 1 0
+hub: vertical_straight 1 1
+hub: diagonal_straight 2 2
+hub: slow_horizontal_straight 3 2 [zone=restricted]
+hub: slow_vertical_straight 3 3 [zone=restricted]
+hub: slow_diagonal_straight 4 4 [zone=restricted]
+end_hub: finish -1 3 [color=red]
+
+connection: start-horizontal_straight
+connection: vertical_straight-horizontal_straight
+connection: vertical_straight-diagonal_straight
+connection: slow_horizontal_straight-diagonal_straight
+connection: slow_horizontal_straight-slow_vertical_straight
+connection: slow_diagonal_straight-slow_vertical_straight
+connection: slow_diagonal_straight-finish

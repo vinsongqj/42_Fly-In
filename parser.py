@@ -17,11 +17,28 @@ class Parser:
 
     def parse(self) -> Graph:
         with open(self.path, encoding="utf-8") as f:
-            for line_number, raw_line in enumerate(f, start=1):
-                line = raw_line.strip()
-                if not line or line.startswith("#"):
-                    continue
-                self._parse_line(line_number, line)
+            lines = f.readlines()
+
+        first_line = None
+        first_line_number = None
+        for line_number, raw_line in enumerate(lines, start=1):
+            stripped = raw_line.strip()
+            if stripped and not stripped.startswith("#"):
+                first_line = stripped
+                first_line_number = line_number
+                break
+
+        if first_line is None or not first_line.startswith("nb_drones:"):
+            raise ParseError(
+                first_line_number or 1,
+                "First non-comment line must be 'nb_drones: int(>0)'"
+            )
+
+        for line_number, raw_line in enumerate(lines, start=1):
+            line = raw_line.strip()
+            if not line or line.startswith("#"):
+                continue
+            self._parse_line(line_number, line)
 
         if self.graph.nb_drones <= 0:
             raise ParseError(0, "Missing nb_drones declaration")
@@ -30,6 +47,7 @@ class Parser:
         if self.graph.end_zone is None:
             raise ParseError(0, "Missing end_hub declaration")
 
+        self.graph.build_adjacency()
         return self.graph
 
     def _parse_line(self, line_number: int, line: str) -> None:

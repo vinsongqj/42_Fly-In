@@ -1,0 +1,38 @@
+# Priority BS: A "priority" path that's actually really slow.
+nb_drones: 1024
+
+start_hub: start 0 0 [color=green]
+
+hub: priority_1 0 1 [color=yellow zone=priority]
+hub: priority_2 0 2 [color=yellow zone=priority]
+hub: priority_3 0 3 [color=yellow zone=priority]
+hub: priority_4 0 4 [color=yellow zone=priority]
+hub: priority_5 0 5 [color=yellow zone=priority]
+hub: priority_6 1 5 [color=yellow zone=priority]
+hub: priority_7 2 5 [color=yellow zone=priority]
+hub: priority_8 3 5 [color=yellow zone=priority]
+hub: priority_9 4 5 [color=yellow zone=priority]
+
+hub: fast_lane_1 2 0 [color=orange]
+hub: fast_lane_2 4 0 [color=orange]
+hub: fast_lane_3 5 1 [color=orange]
+hub: fast_lane_4 5 3 [color=orange]
+
+end_hub: finish 5 5 [color=red]
+
+connection: start-priority_1
+connection: priority_2-priority_1
+connection: priority_2-priority_3
+connection: priority_4-priority_3
+connection: priority_4-priority_5
+connection: priority_6-priority_5
+connection: priority_6-priority_7
+connection: priority_8-priority_7
+connection: priority_8-priority_9
+connection: finish-priority_9
+
+connection: start-fast_lane_1
+connection: fast_lane_2-fast_lane_1
+connection: fast_lane_2-fast_lane_3
+connection: fast_lane_4-fast_lane_3
+connection: fast_lane_4-finish

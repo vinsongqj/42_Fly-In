@@ -1,0 +1,22 @@
+# My drones seem to be avoiding restricted paths.
+nb_drones: 5
+
+start_hub: start 0 0 []
+hub: slow_path_1 1 0 [max_drones=5]
+hub: slow_path_2 2 0 []
+hub: slow_path_3 3 0 []
+hub: slow_path_4 4 0 []
+hub: slow_path_5 5 0 []
+hub: fast_path 3 5 [zone=restricted max_drones=5]
+end_hub: goal 6 0 []
+
+#connnection: start-slow_path_1
+connection: start-slow_path_1
+connection: slow_path_1-slow_path_2
+connection: slow_path_2-slow_path_3
+connection: slow_path_3-slow_path_4
+connection: slow_path_4-slow_path_5
+connection: slow_path_5-goal
+
+connection: start-fast_path
+connection: fast_path-goal
