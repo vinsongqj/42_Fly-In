@@ -1,7 +1,8 @@
-"""Command-line entry point for the Fly-in drone routing simulator.
+"""
+Command-line entry point for the drone simulation.
 
 Usage:
-    python3 main.py <map_file> [--no-color] [--max-turns N]
+    python3 main.py <map_file>
 """
 
 import argparse
@@ -13,8 +14,17 @@ from models import Graph
 from parser import ParseError, Parser
 from simulator import SimulationError, SimulationResult, Simulator
 
+# Internal safety cap: aborts the simulation with a clear error instead of
+# hanging forever if a map is unsolvable or a scheduling bug causes drones
+# to wait indefinitely. Not exposed as a CLI flag -- 2000 turns comfortably
+# exceeds any legitimate map's expected turn count.
+MAX_TURNS = 2000
+
 
 def _print_legend(graph: Graph, use_color: bool) -> None:
+    """
+    Prints legend of zones declared with the colors specified in the .txt file
+    """
     print(colorize("Zones:", None, use_color))
     for zone in sorted(graph.zones.values(), key=lambda z: z.name):
         role = ""
@@ -57,8 +67,6 @@ def _print_summary(result: SimulationResult, use_color: bool) -> None:
 
 def run_map(
     map_path: Path,
-    use_color: bool = True,
-    max_turns: int = 2000,
     animate: bool = False,
     animate_delay: float = 0.5,
     animate_clear: bool = True,
@@ -79,11 +87,11 @@ def run_map(
         print(f"Could not read map file '{map_path}': {exc}", file=sys.stderr)
         return 1
 
-    _print_legend(graph, use_color)
+    _print_legend(graph, use_color=True)
 
     try:
         simulator = Simulator(graph)
-        result = simulator.run(max_turns=max_turns)
+        result = simulator.run(max_turns=MAX_TURNS)
     except SimulationError as exc:
         print(f"Simulation error: {exc}", file=sys.stderr)
         return 1
@@ -94,7 +102,7 @@ def run_map(
         TerminalVisualizer(
             graph,
             result,
-            use_color=use_color,
+            use_color=True,
             delay=animate_delay,
             clear=animate_clear,
             column_spacing=column_spacing,
@@ -102,8 +110,8 @@ def run_map(
         ).run()
         return 0
 
-    _print_turns(result, use_color, graph)
-    _print_summary(result, use_color)
+    _print_turns(result, use_color=True, graph=graph)
+    _print_summary(result, use_color=True)
     return 0
 
 
@@ -112,17 +120,6 @@ def build_arg_parser() -> argparse.ArgumentParser:
         description="Fly-in: multi-drone turn-based routing simulator."
     )
     parser.add_argument("map_file", type=Path, help="Path to a map file.")
-    parser.add_argument(
-        "--no-color",
-        action="store_true",
-        help="Disable colored terminal output.",
-    )
-    parser.add_argument(
-        "--max-turns",
-        type=int,
-        default=2000,
-        help="Abort with an error past this many turns (default: 2000).",
-    )
     parser.add_argument(
         "--animate",
         action="store_true",
@@ -144,8 +141,10 @@ def build_arg_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument(
         "--column-spacing",
+        "--col",
         type=int,
         default=12,
+        dest="column_spacing",
         help=(
             "Characters between tree levels in --animate mode "
             "(default: 12; lower to shrink wide maps, e.g. 5)."
@@ -153,8 +152,10 @@ def build_arg_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument(
         "--row-spacing",
+        "--row",
         type=int,
         default=4,
+        dest="row_spacing",
         help=(
             "Rows between siblings in --animate mode "
             "(default: 4; lower to shrink tall maps, e.g. 2)."
@@ -167,8 +168,6 @@ def main() -> int:
     args = build_arg_parser().parse_args()
     return run_map(
         args.map_file,
-        use_color=not args.no_color,
-        max_turns=args.max_turns,
         animate=args.animate,
         animate_delay=args.delay,
         animate_clear=not args.no_clear,
