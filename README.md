@@ -71,3 +71,17 @@ If run without these flags, the drone turn order will be printed out instead.
  # Delete all build files
  make clean
  ```
+
+ ## Resources
+
+ * [Glassbyte -
+Dijkstra's Algorithm - A step by step analysis, with sample Python code](https://youtu.be/_B5cx-WD5EA?si=BKSisxV8uwMYnltF)
+
+* [ludwig explains - 
+Yen's algorithm for k shortest paths | CS 61B | Ludwig Explains ](https://youtu.be/bQCewgMFaYQ?si=B2M4CjSB1-j7yR_j)
+
+* [ArjanCodes - This Is Why Python Data Classes Are Awesome](https://youtu.be/CvQ7e6yUtnw?si=xnLl-kyMu6v_uUST)
+
+## Disclosure of AI usage
+
+Claude and Gemini were used to educate myself about any further questions on the topic, handle edge cases and error checking.
