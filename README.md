@@ -6,8 +6,6 @@
 
 **Fly-in** is a multi-drone turn-based routing simulator. Given a map of normal, restricted, blocked or limited capacity zones, the program simulates how a fleet of drones travels from a single starting zone to a single destination zone, one turn at a time.
 
-The core pathfinding logic is done through Dijkstra's algorithm wrapped by Yen's algorithm to find the top-K alternate paths. Yen's algorithm will iteratively perform a Dijkstra operation to find the best alternate path if a blocked zone is encountered, while Dijkstra is in charge of determining the shortest path with the least movement cost.
-
 ## Requirements
 
 * python 3.10+
@@ -72,7 +70,11 @@ If run without these flags, the drone turn order will be printed out instead.
  make clean
  ```
 
- ## Resources
+## Algorithm Choices and Implementation Strategy
+
+The algorithm chosen was Yen's algorithm that would iteratively use Dijkstra's algorithm to compute the shortest path from start node to end node. Yen's algorithm was used here to find alternative routes if there are blocked zones encountered by calculating the K-shortest paths.
+
+## Resources
 
  * [Glassbyte -
 Dijkstra's Algorithm - A step by step analysis, with sample Python code](https://youtu.be/_B5cx-WD5EA?si=BKSisxV8uwMYnltF)
