@@ -10,8 +10,8 @@ The core pathfinding logic is done through Dijkstra's algorithm wrapped by Yen's
 
 ## Requirements
 
-python 3.10+
-pip
+* python 3.10+
+* pip
 
 ## Instructions
 
