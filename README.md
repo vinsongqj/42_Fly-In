@@ -8,7 +8,10 @@
 
 The core pathfinding logic is done through Dijkstra's algorithm wrapped by Yen's algorithm to find the top-K alternate paths. Yen's algorithm will iteratively perform a Dijkstra operation to find the best alternate path if a blocked zone is encountered, while Dijkstra is in charge of determining the shortest path with the least movement cost.
 
+## Requirements
 
+python 3.10+
+pip
 
 ## Instructions
 
