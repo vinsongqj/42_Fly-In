@@ -108,4 +108,4 @@ Yen's algorithm for k shortest paths | CS 61B | Ludwig Explains ](https://youtu.
 
 ## Disclosure of AI usage
 
-Claude and Gemini were used to educate myself about any further questions on the topic, handle edge cases and error checking.
+Claude and Gemini were used to educate myself about any further questions on the topic, handle edge cases, writing docstrings and error checking.
