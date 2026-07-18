@@ -14,10 +14,7 @@ from models import Graph
 from parser import ParseError, Parser
 from simulator import SimulationError, SimulationResult, Simulator
 
-# Internal safety cap: aborts the simulation with a clear error instead of
-# hanging forever if a map is unsolvable or a scheduling bug causes drones
-# to wait indefinitely. Not exposed as a CLI flag -- 2000 turns comfortably
-# exceeds any legitimate map's expected turn count.
+# Safety cap
 MAX_TURNS = 2000
 
 
@@ -43,6 +40,9 @@ def _print_legend(graph: Graph, use_color: bool) -> None:
 def _print_turns(
     result: SimulationResult, use_color: bool, graph: Graph
 ) -> None:
+    """
+    Prints turn by turn the steps each drone takes.
+    """
     for turn_number, moves in enumerate(result.turns, start=1):
         prefix = colorize(f"{turn_number:>3}:", None, use_color)
         rendered_moves = []
@@ -55,6 +55,10 @@ def _print_turns(
 
 
 def _print_summary(result: SimulationResult, use_color: bool) -> None:
+    """
+    Prints the total number of drones delivered and how many turns 
+    the simulation took.
+    """
     header = colorize(
         f"{BOLD}Delivered {result.drones_delivered} drone(s) in "
         f"{result.total_turns} turn(s).",
@@ -73,7 +77,8 @@ def run_map(
     column_spacing: int = 12,
     row_spacing: int = 4,
 ) -> int:
-    """Parse `map_path`, run the simulation, and print results.
+    """
+    Parse `map_path`, run the simulation, and print results.
 
     Returns:
         A process exit code (0 on success, 1 on any handled failure).
@@ -116,6 +121,9 @@ def run_map(
 
 
 def build_arg_parser() -> argparse.ArgumentParser:
+    """
+    Parses the optional flags the program accepts.
+    """
     parser = argparse.ArgumentParser(
         description="Fly-in: multi-drone turn-based routing simulator."
     )
@@ -165,6 +173,9 @@ def build_arg_parser() -> argparse.ArgumentParser:
 
 
 def main() -> int:
+    """
+    The entrypoint for the simulation.
+    """
     args = build_arg_parser().parse_args()
     return run_map(
         args.map_file,
