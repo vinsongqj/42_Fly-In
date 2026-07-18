@@ -74,6 +74,9 @@ If run without these flags, the drone turn order will be printed out instead.
 
 The algorithm chosen was Yen's algorithm that would iteratively use Dijkstra's algorithm to compute the shortest path from start node to end node. Yen's algorithm was used here to find alternative routes if there are blocked zones encountered by calculating the K-shortest paths.
 
+> "Dijkstra's algorithm finds the shortest path from one vertex to all other vertices. It does so by repeatedly selecting the nearest unvisited vertex and calculating the distance to all the unvisited neighboring vertices. Dijkstra's algorithm is often considered to be the most straightforward algorithm for solving the shortest path problem. Dijkstra's algorithm is used for solving single-source shortest path problems for directed or undirected paths. Single-source means that one vertex is chosen to be the start, and the algorithm will find the shortest path from that vertex to all other vertices." - W3Schools
+>
+
 The K-shortest paths are then implemented in the simulator to pre-compute the drone routes before running the simulation, and the drones are load-balanced to take one of these routes. Whether each drone can take the next step is computed turn by turn based on the occupancy of each zone and connection. An error should be raised if a deadlock occurs.
 
 ## Visual Representation
