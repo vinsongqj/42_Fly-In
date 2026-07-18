@@ -80,15 +80,15 @@ The K-shortest paths are then implemented in the simulator to pre-compute the dr
 
 By default, when running without the ``--animate`` flag it should show the steps turn by turn:
 
-
+<img width="418" height="323" alt="image" src="https://github.com/user-attachments/assets/28f4a62f-38b9-4c59-8103-f95ca293a852" />
 
 Here is what it looks like with the ``--animate`` flag before running the animation:
 
-
+<img width="642" height="249" alt="image-1" src="https://github.com/user-attachments/assets/0fec39c2-07d4-4c53-91c3-9486fb77c8b6" />
 
 This is the how the map is displayed in the terminal:
 
-
+<img width="413" height="262" alt="image-2" src="https://github.com/user-attachments/assets/58633959-7447-4e39-bbe2-91a983349dd1" />
 
 The zone names are abbreviated with legends and color coded for visual clarity, and the terminal
 will reset each turn at an interval of 0.5 seconds by default but can be changed with the ``--delay=`` flag to display the animation frame by frame. Drones are represented as white squares moving across the zones.
