@@ -74,6 +74,25 @@ If run without these flags, the drone turn order will be printed out instead.
 
 The algorithm chosen was Yen's algorithm that would iteratively use Dijkstra's algorithm to compute the shortest path from start node to end node. Yen's algorithm was used here to find alternative routes if there are blocked zones encountered by calculating the K-shortest paths.
 
+The K-shortest paths are then implemented in the simulator to pre-compute the drone routes before running the simulation, and the drones are load-balanced to take one of these routes. Whether each drone can take the next step is computed turn by turn based on the occupancy of each zone and connection. An error should be raised if a deadlock occurs.
+
+## Visual Representation
+
+By default, when running without the ``--animate`` flag it should show the steps turn by turn:
+
+
+
+Here is what it looks like with the ``--animate`` flag before running the animation:
+
+
+
+This is the how the map is displayed in the terminal:
+
+
+
+The zone names are abbreviated with legends and color coded for visual clarity, and the terminal
+will reset each turn at an interval of 0.5 seconds by default but can be changed with the ``--delay=`` flag to display the animation frame by frame. Drones are represented as white squares moving across the zones.
+
 ## Resources
 
  * [Glassbyte -
