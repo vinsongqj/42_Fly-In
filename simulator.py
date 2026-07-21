@@ -39,7 +39,9 @@ from pathfinder import PathfindingError, k_shortest_paths, path_cost
 
 
 class SimulationError(Exception):
-    """Raised when a scenario cannot be simulated to completion."""
+    """
+    Raised when a scenario cannot be simulated to completion.
+    """
 
 
 class DroneStatus(str, Enum):
@@ -50,7 +52,9 @@ class DroneStatus(str, Enum):
 
 @dataclass
 class Drone:
-    """Mutable simulation state for a single drone."""
+    """
+    Mutable simulation state for a single drone.
+    """
 
     drone_id: int
     path: list[str]
@@ -63,19 +67,24 @@ class Drone:
 
     @property
     def current_zone(self) -> str:
-        """Name of the zone this drone currently occupies (or last left)."""
+        """
+        Name of the zone this drone currently occupies (or last left).
+        """
         return self.path[self.position]
 
     @property
     def next_zone(self) -> str | None:
-        """Name of the next zone on this drone's path, or None at the end."""
+        """
+        Name of the next zone on this drone's path, or None at the end.
+        """
         if self.position + 1 >= len(self.path):
             return None
         return self.path[self.position + 1]
 
     @property
     def remaining_cost(self) -> int:
-        """Turns still needed to reach the end zone from here, ignoring
+        """
+        Turns still needed to reach the end zone from here, ignoring
         any congestion (i.e. the drone's own path cost, not wall-clock
         time). Used to prioritize drones that are cheapest to finish.
         """
@@ -84,7 +93,9 @@ class Drone:
 
 @dataclass
 class SimulationResult:
-    """Outcome of a completed simulation run."""
+    """
+    Outcome of a completed simulation run.
+    """
 
     turns: list[list[str]]
     total_turns: int
@@ -93,7 +104,9 @@ class SimulationResult:
 
 
 class Simulator:
-    """Schedules and simulates a fleet of drones across a `Graph`."""
+    """
+    Schedules and simulates a fleet of drones across a `Graph`.
+    """
 
     def __init__(self, graph: Graph, max_paths: int = 4) -> None:
         if graph.start_zone is None or graph.end_zone is None:
@@ -104,33 +117,34 @@ class Simulator:
         self.graph = graph
         self._connections = self._index_connections(graph)
         self.drones: list[Drone] = self._assign_drones(graph, max_paths)
-
-        # Persistent state: drones physically sitting at a zone right now.
         self.zone_occupancy: dict[str, int] = defaultdict(int)
-        # Slots pre-booked by drones currently in flight toward a zone,
-        # so a normal move can't steal the seat a transiting drone needs.
         self.reserved_zone_slots: dict[str, int] = defaultdict(int)
-        # Persistent state: drones currently mid-flight on a connection
-        # (only restricted, 2-turn moves stay "in" a connection this way).
         self.connection_occupancy: dict[frozenset[str], int] = (
             defaultdict(int)
         )
-        # Transient, reset every turn: 1-turn (normal/priority) moves
-        # that share a connection within the same turn.
         self._turn_connection_usage: dict[frozenset[str], int] = (
             defaultdict(int)
         )
 
-    # -- setup ---------------------------------------------------------
-
     @staticmethod
     def _index_connections(graph: Graph) -> dict[frozenset[str], Connection]:
+        """
+        Build a direction-agnostic zone-pair -> Connection lookup.
+        """
         return {
             frozenset((conn.zone_a, conn.zone_b)): conn
             for conn in graph.connections
         }
 
     def _connection_between(self, zone_a: str, zone_b: str) -> Connection:
+        """
+        Look up the `Connection` linking two zones, direction-agnostic.
+
+        Raises:
+            SimulationError: if the graph has no such connection -- an
+                internal-consistency check, since every path should only
+                ever step across edges the graph actually has.
+        """
         conn = self._connections.get(frozenset((zone_a, zone_b)))
         if conn is None:
             raise SimulationError(
@@ -140,7 +154,7 @@ class Simulator:
 
     def _path_capacity(self, path: list[str]) -> int:
         """Bottleneck throughput of a path: the tightest zone or link on it."""
-        capacity = None
+        capacity: int | None = None
         for zone_name in path[1:-1]:
             zone = self.graph.zones[zone_name]
             capacity = (
@@ -190,9 +204,16 @@ class Simulator:
         return accepted or ranked_paths[:1]
 
     def _assign_drones(self, graph: Graph, max_paths: int) -> list[Drone]:
+        """
+        Create one `Drone` per `graph.nb_drones`, each pre-assigned to
+        one of up to `max_paths` direction-consistent candidate routes,
+        greedily load-balanced by current occupancy-to-capacity ratio.
+
+        Raises:
+            SimulationError: if no path exists from start to end at all.
+        """
         assert graph.start_zone is not None and graph.end_zone is not None
-        # Ask for a larger pool than we need so that filtering out
-        # direction-conflicting shortcuts still leaves real alternatives.
+
         pool_size = max(1, min(max_paths * 4, graph.nb_drones * 2, 60))
         try:
             ranked_paths = k_shortest_paths(
@@ -232,17 +253,18 @@ class Simulator:
 
     @staticmethod
     def _remaining_cost_table(graph: Graph, path: list[str]) -> list[int]:
-        """Turns needed to reach the end from each index of `path`."""
+        """
+        Turns needed to reach the end from each index of `path`.
+        """
         table = [0] * len(path)
         for i in range(len(path) - 2, -1, -1):
             next_zone = graph.zones[path[i + 1]]
             table[i] = table[i + 1] + next_zone.movement_cost()
         return table
 
-    # -- public API ------------------------------------------------------
-
     def run(self, max_turns: int = 2000) -> SimulationResult:
-        """Advance the simulation until every drone reaches the end zone.
+        """
+        Advance the simulation until every drone reaches the end zone.
 
         Raises:
             SimulationError: if a deadlock is detected or `max_turns` is
@@ -283,8 +305,6 @@ class Simulator:
             paths=self.assigned_paths,
         )
 
-    # -- turn phases -------------------------------------------------------
-
     def _priority_order(self, drones: Iterable[Drone]) -> list[Drone]:
         """Order drones cheapest-to-finish first, then by ID.
 
@@ -298,6 +318,10 @@ class Simulator:
         )
 
     def _advance_transits(self, turn_moves: list[str]) -> None:
+        """
+        Tick every in-flight drone's countdown by one turn, completing
+        the transit (and freeing its reservation) once it reaches zero.
+        """
         in_transit = (
             d for d in self.drones if d.status == DroneStatus.IN_TRANSIT
         )
@@ -309,6 +333,14 @@ class Simulator:
                 turn_moves.append(f"D{drone.drone_id}-{drone.transit_label}")
 
     def _advance_waiting(self, turn_moves: list[str]) -> None:
+        """
+        Let every eligible waiting drone attempt one move this turn.
+
+        Excludes drones with no `next_zone` (already at the end) and
+        drones that already acted this turn via `_complete_transit`, so
+        a drone that just landed can't immediately move again in the
+        same turn.
+        """
         waiting = (
             d
             for d in self.drones
@@ -319,9 +351,14 @@ class Simulator:
         for drone in self._priority_order(waiting):
             self._attempt_move(drone, turn_moves)
 
-    # -- movement mechanics ------------------------------------------------
-
     def _zone_available(self, name: str, zone: Zone) -> bool:
+        """
+        Whether one more drone could occupy this zone right now.
+
+        Start/end zones have unlimited capacity, per the subject; other
+        zones count both physically-present and already-reserved
+        (in-flight, about to land) drones against `max_drones`.
+        """
         if zone.is_start or zone.is_end:
             return True
         occupied = self.zone_occupancy[name] + self.reserved_zone_slots[name]
@@ -330,6 +367,11 @@ class Simulator:
     def _connection_available(
         self, conn_key: frozenset[str], conn: Connection
     ) -> bool:
+        """
+        Whether one more drone could use this connection right now,
+        counting both multi-turn transits and this-turn single moves
+        against `max_link_capacity`.
+        """
         used = (
             self.connection_occupancy[conn_key]
             + self._turn_connection_usage[conn_key]
@@ -337,15 +379,31 @@ class Simulator:
         return used < conn.max_link_capacity
 
     def _leave_zone(self, name: str) -> None:
+        """
+        Decrement a zone's live occupancy (no-op for start/end).
+        """
         zone = self.graph.zones[name]
         if not (zone.is_start or zone.is_end):
             self.zone_occupancy[name] -= 1
 
     def _enter_zone_now(self, name: str, zone: Zone) -> None:
+        """
+        Increment a zone's live occupancy (no-op for start/end).
+        """
         if not (zone.is_start or zone.is_end):
             self.zone_occupancy[name] += 1
 
     def _attempt_move(self, drone: Drone, turn_moves: list[str]) -> None:
+        """
+        Try to advance `drone` one step along its path this turn.
+
+        If the destination zone or the connecting link is full, the
+        drone stays put (no exception, no side effect -- this is the
+        mechanism behind "waiting"). Otherwise the drone either arrives
+        immediately (normal/priority zones, cost 1) or becomes
+        `IN_TRANSIT` for the remaining turns (restricted zones, cost 2+),
+        reserving its connection and destination seat for the duration.
+        """
         current = drone.current_zone
         target_name = drone.next_zone
         assert target_name is not None
@@ -355,9 +413,9 @@ class Simulator:
         cost = target_zone.movement_cost()
 
         if not self._zone_available(target_name, target_zone):
-            return  # stay in place: destination is full this turn
+            return
         if not self._connection_available(conn_key, conn):
-            return  # stay in place: connection is saturated this turn
+            return
 
         self._leave_zone(current)
 
@@ -372,9 +430,6 @@ class Simulator:
             )
             turn_moves.append(f"D{drone.drone_id}-{target_name}")
         else:
-            # Restricted zone: commit for `cost` turns total. The connection
-            # and the destination seat are reserved now so no other drone
-            # can double-book them while this drone is mid-flight.
             self.connection_occupancy[conn_key] += 1
             self.reserved_zone_slots[target_name] += 1
             drone.status = DroneStatus.IN_TRANSIT
@@ -384,6 +439,14 @@ class Simulator:
             turn_moves.append(f"D{drone.drone_id}-{drone.transit_label}")
 
     def _complete_transit(self, drone: Drone, turn_moves: list[str]) -> None:
+        """
+        Land a drone whose restricted-zone transit just finished.
+
+        Releases the connection/seat `_attempt_move` reserved, converts
+        the reservation into actual occupancy, and marks the drone
+        `_acted_this_turn` so `_advance_waiting` won't move it again
+        within the same turn it just landed.
+        """
         target_name = drone.transit_target
         assert target_name is not None
         origin_name = drone.current_zone

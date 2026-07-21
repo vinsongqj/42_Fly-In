@@ -22,7 +22,7 @@ class Zone:
     """
     A single node in the map: a named location with a position, a
     type, an optional display color, and a capacity limit.
- 
+
     Attributes:
     - name: Unique identifier used in map files and connection syntax.
     - x: Horizontal coordinate, as declared in the map file.
@@ -48,7 +48,7 @@ class Zone:
     def movement_cost(self) -> int:
         """
         Turns required for a drone to enter this zone.
- 
+
         Returns:
             2 for a `restricted` zone (a drone must commit to a 2-turn
             transit and cannot stop partway); 1 for every other zone type.
@@ -65,7 +65,7 @@ class Connection:
     """
     An undirected edge linking two zones, with an optional shared
     traffic limit.
- 
+
     Attributes:
     - zone_a: Name of one endpoint zone.
     - zone_b: Name of the other endpoint zone.
@@ -82,7 +82,7 @@ class Graph:
     """
     The full parsed map: every zone and connection, plus lookup
     structures used by the pathfinder and simulator.
- 
+
     Attributes:
     - nb_drones: Number of drones to simulate, from the map's
                  `nb_drones:` declaration.
@@ -105,7 +105,7 @@ class Graph:
     def build_adjacency(self) -> None:
         """
         (Re)build the zone-name -> incident-connections lookup table.
- 
+
         Must be called (once, after all zones/connections are added)
         before `neighbors()` will return anything useful. Safe to call
         again if the graph's zones or connections change, since it
@@ -119,13 +119,13 @@ class Graph:
     def neighbors(self, zone_name: str) -> list[str]:
         """
         Return the names of every zone directly connected to `zone_name`.
- 
+
         Args:
             zone_name: The zone to look up neighbors for. Must exist in
                 `adjacency` (i.e. `build_adjacency()` must have been
                 called since this zone was added) or an empty list is
                 returned.
- 
+
         Returns:
             A list of neighboring zone names, in no particular order.
             Each entry corresponds to one Connection touching `zone_name`.

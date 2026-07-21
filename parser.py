@@ -3,6 +3,9 @@ from models import ZoneType, Zone, Connection, Graph
 
 
 class ParseError(Exception):
+    """
+    The default error raised when encountering a parsing error.
+    """
     def __init__(self, line_number: int, msg: str) -> None:
         self.line_number = line_number
         self.msg = msg
@@ -10,12 +13,32 @@ class ParseError(Exception):
 
 
 class Parser:
+    """
+    The class that handles the parsing of the map file.
+    """
     def __init__(self, path: Path) -> None:
+        """
+        Initializes the parser.
+        """
         self.path = path
         self.graph = Graph()
         self.seen_connections: set[frozenset[str]] = set()
 
     def parse(self) -> Graph:
+        """
+        Parse `self.path` into a fully-populated `Graph`.
+
+        Reads the whole file, verifies the first non-comment line is
+        `nb_drones:` (a hard requirement, not just a per-line check,
+        since it can only be confirmed by looking at the file as a
+        whole), dispatches every other line by its prefix, then runs
+        whole-file checks that also can't be done line-by-line (exactly
+        one start/end zone declared, `nb_drones` actually set).
+
+        Raises:
+            ParseError: on any malformed or missing required content.
+        """
+
         with open(self.path, encoding="utf-8") as f:
             lines = f.readlines()
 
@@ -51,6 +74,13 @@ class Parser:
         return self.graph
 
     def _parse_line(self, line_number: int, line: str) -> None:
+        """
+        Dispatch one already-stripped, non-blank, non-comment line to
+        the parsing function matching its prefix.
+
+        Raises:
+            ParseError: if the line matches none of the known prefixes.
+        """
         if line.startswith("nb_drones:"):
             self._parse_nb_drones(line_number, line)
         elif line.startswith("start_hub:"):
@@ -71,6 +101,12 @@ class Parser:
             raise ParseError(line_number, f"Unrecognized line '{line}'")
 
     def _parse_nb_drones(self, line_number: int, line: str) -> None:
+        """
+        Parse an `nb_drones: <int>` line and store it on the graph.
+
+        Raises:
+            ParseError: if the value isn't an integer, or isn't positive.
+        """
         val = line[len("nb_drones:"):].strip()
         try:
             nb = int(val)
@@ -89,6 +125,19 @@ class Parser:
         is_start: bool,
         is_end: bool
     ) -> None:
+        """
+        Parse a `hub:`/`start_hub:`/`end_hub:` line into a `Zone` and
+        register it on the graph.
+
+        All three prefixes share the exact same `name x y [metadata]`
+        shape, so `_parse_line` routes them all here with `is_start`/
+        `is_end` set accordingly, instead of duplicating this logic
+        three times.
+
+        Raises:
+            ParseError: on a duplicate zone name, or a second
+                `start_hub`/`end_hub` declaration.
+        """
         rest = line[len(prefix):].strip()
         main_part, meta_part = self.split_brackets(line_number, rest)
         metadata = self.parse_metadata(line_number, meta_part)
@@ -112,6 +161,13 @@ class Parser:
     def _parse_connection_declaration(self,
                                       line_number: int,
                                       line: str) -> None:
+        """
+        Parse a `connection:` line into a `Connection` and register it.
+
+        Raises:
+            ParseError: if this exact connection (in either direction)
+                was already declared earlier in the file.
+        """
         rest = line[len("connection:"):].strip()
         conn = self.parse_connection(line_number, rest)
         key = frozenset((conn.zone_a, conn.zone_b))
@@ -124,6 +180,20 @@ class Parser:
         self.graph.connections.append(conn)
 
     def parse_metadata(self, line_number: int, text: str) -> dict[str, str]:
+        """
+        Parse a `key=value key2=value2 ...` metadata string into a dict.
+
+        `text` is the raw content between `[` and `]` (or an empty
+        string if a line had no metadata block at all) -- shared by both
+        zone and connection lines, since they use the same syntax.
+        Values are returned as plain strings; each caller is responsible
+        for converting to the type it actually expects (e.g. `int` for
+        `max_drones`).
+
+        Raises:
+            ParseError: on a malformed token (missing `=`, empty key or
+                value), or a key repeated within the same bracket.
+        """
         text = text.strip()
         if not text:
             return {}
@@ -143,6 +213,17 @@ class Parser:
         return metadata
 
     def split_brackets(self, line_number: int, rest: str) -> tuple[str, str]:
+        """
+        Split off an optional trailing `[...]` metadata block.
+
+        E.g. `"roof1 3 4 [zone=restricted color=red]"` becomes
+        `("roof1 3 4", "zone=restricted color=red")`. If there's no
+        bracket at all, returns `(rest, "")` unchanged.
+
+        Raises:
+            ParseError: if brackets are present but malformed (not
+                exactly one pair, or not at the end of the line).
+        """
         rest = rest.strip()
         if "[" not in rest and "]" not in rest:
             return rest, ""
@@ -164,6 +245,17 @@ class Parser:
         is_start: bool,
         is_end: bool,
     ) -> Zone:
+        """
+        Build a `Zone` from its `"name x y"` part plus parsed metadata.
+
+        Applies the documented defaults for any metadata key that's
+        absent (`zone=normal`, `max_drones=1`, no color).
+
+        Raises:
+            ParseError: on a malformed `name x y` shape, a name
+                containing `-`, non-integer coordinates, an invalid
+                `zone` type, or a non-positive `max_drones`.
+        """
         tokens = name_x_y.split()
         if len(tokens) != 3:
             raise ParseError(line_number,
@@ -215,6 +307,18 @@ class Parser:
         )
 
     def parse_connection(self, line_number: int, rest: str) -> Connection:
+        """
+        Build a `Connection` from a `"zoneA-zoneB [metadata]"` string.
+
+        Requires both `zoneA` and `zoneB` to already be registered on
+        the graph -- since zones are parsed top-to-bottom before
+        connections are validated, this naturally enforces the
+        "connections may only reference previously-defined zones" rule.
+
+        Raises:
+            ParseError: on malformed `zoneA-zoneB` syntax, a reference to
+                an unknown zone, or a non-positive `max_link_capacity`.
+        """
         main_part, meta_part = self.split_brackets(line_number, rest)
         metadata = self.parse_metadata(line_number, meta_part)
 

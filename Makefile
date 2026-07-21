@@ -30,9 +30,9 @@ clean:
 	@rm -rf venv
 
 lint:
-	@flake8 .
-	@mypy . --warn-return-any --warn-unused-ignores --ignore-missing-imports --disallow-untyped-defs --check-untyped-defs
+	@flake8 $$(find . -maxdepth 1 -name "*.py")
+	@mypy $$(find . -maxdepth 1 -name "*.py") --warn-return-any --warn-unused-ignores --ignore-missing-imports --disallow-untyped-defs --check-untyped-defs
 
 lint-strict:
-	@flake8 .
-	@mypy . --strict
+	@flake8 $$(find . -maxdepth 1 -name "*.py")
+	@mypy $$(find . -maxdepth 1 -name "*.py") --strict

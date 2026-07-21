@@ -56,7 +56,7 @@ def _print_turns(
 
 def _print_summary(result: SimulationResult, use_color: bool) -> None:
     """
-    Prints the total number of drones delivered and how many turns 
+    Prints the total number of drones delivered and how many turns
     the simulation took.
     """
     header = colorize(
