@@ -60,6 +60,10 @@ def _clear_screen() -> None:
 
 
 def _visible_len(text: str) -> int:
+    """
+    Calculate the visible character length of a string
+    by stripping ANSI escape codes.
+    """
     return len(_ANSI_RE.sub("", text))
 
 
