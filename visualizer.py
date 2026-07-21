@@ -94,13 +94,18 @@ def _make_zone_codes(zone_names: list[str]) -> dict[str, str]:
 
 @dataclass
 class _ReplayState:
-    """Tracks live drone positions while replaying the recorded turn log."""
+    """
+    Tracks live drone positions while replaying the recorded turn log.
+    """
 
     zone_occupants: dict[str, list[int]] = field(default_factory=dict)
     in_flight: dict[int, tuple[str, str]] = field(default_factory=dict)
     _location: dict[int, str] = field(default_factory=dict)
 
     def apply_move(self, drone_id: int, dest: str, graph: Graph) -> None:
+        """
+        Update the internal position tracking for a specific drone.
+        """
         if dest in graph.zones:
             origin = self._location.get(drone_id)
             if drone_id in self.in_flight:
@@ -137,18 +142,30 @@ class _Canvas:
     def __init__(
         self, width: int, height: int, use_color: bool = True
     ) -> None:
+        """
+        Initialize the canvas with specified dimensions and color settings.
+        """
         self.width = width
         self.height = height
         self.use_color = use_color
         self._cells: list[list[str]] = [[" "] * width for _ in range(height)]
 
     def in_bounds(self, row: int, col: int) -> bool:
+        """
+        Check whether the given coordinates fall within the canvas boundaries.
+        """
         return 0 <= row < self.height and 0 <= col < self.width
 
     def is_empty(self, row: int, col: int) -> bool:
+        """
+        Check whether a specific grid cell is empty space.
+        """
         return self.in_bounds(row, col) and self._cells[row][col] == " "
 
     def dot(self, row: int, col: int) -> None:
+        """
+        Place a dot character at the specified coordinate if the cell is empty.
+        """
         if self.is_empty(row, col):
             self._cells[row][col] = colorize(_DOT, "gray", self.use_color)
 
@@ -181,7 +198,9 @@ class _Canvas:
         color: str | None = None,
         reverse: bool = False,
     ) -> None:
-        """Place `text`, one character per cell, overwriting any dots."""
+        """
+        Place `text`, one character per cell, overwriting any dots.
+        """
         width = len(text)
         if not self.in_bounds(row, col):
             return
@@ -192,16 +211,24 @@ class _Canvas:
                                                               reverse)
 
     def _render_char(self, ch: str, color: str | None, reverse: bool) -> str:
+        """
+        Apply color and style formatting to an individual character string.
+        """
         if reverse and self.use_color:
             return f"{REVERSE}{ch}{RESET}"
         return colorize(ch, color, self.use_color)
 
     def render(self) -> str:
+        """
+        Compile the 2D grid cell matrix into a single multi-line string.
+        """
         return "\n".join("".join(row) for row in self._cells)
 
 
 class TerminalVisualizer:
-    """Plays a completed `SimulationResult` back as a terminal animation."""
+    """
+    Plays a completed `SimulationResult` back as a terminal animation.
+    """
 
     def __init__(
         self,
@@ -222,11 +249,6 @@ class TerminalVisualizer:
         self.column_spacing = column_spacing
         self.row_spacing = row_spacing
         self.codes = _make_zone_codes(list(graph.zones.keys()))
-        # Clearing is on by default whenever animation is explicitly
-        # requested — don't silently fall back to "print everything"
-        # just because stdout.isatty() came back False for some
-        # environment-specific reason. --no-clear opts out explicitly
-        # (e.g. when redirecting output to a log file).
         self.clear = clear
         self._interactive_stdin = sys.stdin.isatty()
 
@@ -235,10 +257,10 @@ class TerminalVisualizer:
         self.rows = self._resolve_row_collisions(columns, raw_rows)
         self.width, self.height = self._grid_size(max_width, max_height)
 
-    # -- layout ----------------------------------------------------------
-
     def _tree_layout(self) -> tuple[dict[str, int], dict[str, float]]:
-        """BFS depth -> column; tidy-tree leaf order -> row."""
+        """
+        BFS depth -> column; tidy-tree leaf order -> row.
+        """
         assert self.graph.start_zone is not None
         start = self.graph.start_zone
 
@@ -258,8 +280,6 @@ class TerminalVisualizer:
                     children[current].append(neighbor)
                     queue.append(neighbor)
 
-        # Any zone unreachable from start (shouldn't happen on a valid
-        # map, but stay robust) becomes its own root at column 0.
         stragglers = [n for n in self.graph.zones if n not in visited]
         for name in stragglers:
             columns[name] = 0
@@ -268,6 +288,10 @@ class TerminalVisualizer:
         leaf_counter = [0]
 
         def assign_rows(node: str) -> float:
+            """
+            Recursively assign vertical rows to nodes
+            for tree layout alignment.
+            """
             kids = children.get(node, [])
             if not kids:
                 rows[node] = float(leaf_counter[0])
@@ -309,6 +333,10 @@ class TerminalVisualizer:
     def _grid_size(
         self, max_width: int, max_height: int
     ) -> tuple[int, int]:
+        """
+        Calculate the required width and height dimensions for the
+        visualization canvas grid.
+        """
         max_col = max(self.columns.values())
         max_row = max(self.rows.values()) if self.rows else 0
         required_width = (max_col + 1) * self.column_spacing + 6
@@ -328,27 +356,32 @@ class TerminalVisualizer:
         return max(required_width, 20), max(required_height, 8)
 
     def _pos(self, name: str) -> tuple[int, int]:
-        """Character-grid (row, col) anchor for a zone's label."""
+        """
+        Character-grid (row, col) anchor for a zone's label.
+        """
         row = 1 + self.rows[name] * self.row_spacing
         col = 2 + self.columns[name] * self.column_spacing
         return row, col
 
     def _center(self, name: str) -> tuple[int, int]:
+        """
+        Calculate the exact center coordinate of a zone's
+        text label on the grid.
+        """
         row, col = self._pos(name)
         return row, col + len(self.codes[name]) // 2
 
-    # -- edge drawing --------------------------------------------------
-
     def _draw_edge(self, canvas: _Canvas, zone_a: str, zone_b: str) -> None:
+        """
+        Draw connection paths or dashed dot lines between
+        two zones on the canvas grid.
+        """
         r0, c0 = self._center(zone_a)
         r1, c1 = self._center(zone_b)
         left_r, left_c = (r0, c0) if c0 <= c1 else (r1, c1)
         right_r, right_c = (r1, c1) if c0 <= c1 else (r0, c0)
 
         if left_r == right_r:
-            # Same row: a dashed line of dots. If the gap is too tight
-            # for a stepped dashed line, still place one dot so a real
-            # connection is never rendered as if it didn't exist.
             cols = list(range(left_c + 2, right_c - 1, 2))
             if not cols and right_c - left_c > 2:
                 cols = [(left_c + right_c) // 2]
@@ -356,11 +389,6 @@ class TerminalVisualizer:
                 canvas.dot(left_r, col)
             return
 
-        # Different rows: orthogonal elbow routing (horizontal, then
-        # vertical, then horizontal), turning at the midpoint column.
-        # Free-form diagonals get tangled fast on a dense graph; a
-        # consistent horizontal/vertical grid reads far more cleanly,
-        # the same reason tree/org-chart diagrams use elbow connectors.
         turn_col = (left_c + right_c) // 2
         turn_col = max(left_c + 2, min(turn_col, right_c - 2))
 
@@ -378,15 +406,21 @@ class TerminalVisualizer:
         if right_c - turn_col > 2 and not range(turn_col + 2, right_c - 1, 2):
             canvas.dot(right_r, (turn_col + right_c) // 2)
 
-    # -- rendering ---------------------------------------------------------
-
     def _zone_color(self, zone_name: str) -> str | None:
+        """
+        Retrieve the display color associated with a specific
+        zone type or custom configuration.
+        """
         zone = self.graph.zones[zone_name]
         return zone.color or _ZONE_TYPE_FALLBACK_COLOR.get(
             zone.zone_type.value
         )
 
     def _render_grid(self, state: _ReplayState) -> str:
+        """
+        Render the complete visual map grid including edges, zones,
+        occupant badges, and mid-flight drones.
+        """
         canvas = _Canvas(self.width, self.height, self.use_color)
 
         for conn in self.graph.connections:
@@ -427,6 +461,10 @@ class TerminalVisualizer:
         return grid_text
 
     def _render_legend(self) -> str:
+        """
+        Generate the text legend mapping short
+        zone codes to full zone names and types.
+        """
         lines = ["Zone legend (code=name[type]):"]
         entries = []
         for name in sorted(self.codes):
@@ -445,15 +483,19 @@ class TerminalVisualizer:
     def _render_footer(
         self, turn_number: int, total_turns: int, moves: list[str]
     ) -> str:
+        """
+        Generate the footer status message displaying current
+        turn progress and move actions.
+        """
         header = colorize(
             f"Turn {turn_number}/{total_turns}", None, self.use_color
         )
         return f"{header}\n" + " ".join(moves)
 
-    # -- playback ------------------------------------------------------
-
     def run(self) -> None:
-        """Print the legend once, then animate every recorded turn."""
+        """
+        Print the legend once, then animate every recorded turn.
+        """
         print(self._render_legend())
         print()
         if self._interactive_stdin:
