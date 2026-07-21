@@ -73,7 +73,6 @@ def run_map(
     map_path: Path,
     animate: bool = False,
     animate_delay: float = 0.5,
-    animate_clear: bool = True,
     column_spacing: int = 12,
     row_spacing: int = 4,
 ) -> int:
@@ -109,7 +108,7 @@ def run_map(
             result,
             use_color=True,
             delay=animate_delay,
-            clear=animate_clear,
+            clear=True,
             column_spacing=column_spacing,
             row_spacing=row_spacing,
         ).run()
@@ -140,15 +139,6 @@ def build_arg_parser() -> argparse.ArgumentParser:
         help="Seconds between animation frames (default: 0.5).",
     )
     parser.add_argument(
-        "--no-clear",
-        action="store_true",
-        help=(
-            "With --animate, print each frame sequentially instead of "
-            "clearing the screen (useful when redirecting to a file)."
-        ),
-    )
-    parser.add_argument(
-        "--column-spacing",
         "--col",
         type=int,
         default=12,
@@ -159,7 +149,6 @@ def build_arg_parser() -> argparse.ArgumentParser:
         ),
     )
     parser.add_argument(
-        "--row-spacing",
         "--row",
         type=int,
         default=4,
@@ -181,7 +170,6 @@ def main() -> int:
         args.map_file,
         animate=args.animate,
         animate_delay=args.delay,
-        animate_clear=not args.no_clear,
         column_spacing=args.column_spacing,
         row_spacing=args.row_spacing,
     )
